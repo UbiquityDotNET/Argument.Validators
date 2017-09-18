@@ -1,0 +1,9 @@
+version: 1.0.{build}
+nuget:
+  project_feed: true
+  disable_publish_on_pr: true
+build:
+  project: src/Argument.Validators/Ubiquity.ArgValidators
+  verbosity: minimal
+artifacts:
+- path: src\**.nupkg

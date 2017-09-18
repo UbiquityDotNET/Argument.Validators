@@ -1,0 +1,186 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/GitHub/Argument.Validators",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "ZI6jvOSnmdBM8w14eTwQMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.ValidatedNotNullAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.ValidatedNotNullAttribute.html",
+          "hash": "eJchoSJ/4Kpwo+krANQjGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.html",
+          "hash": "kyVyxyxd8LitXxY3g0TQaw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html",
+          "hash": "XOfaIIugH/VOR/uR0U5F/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace.html",
+          "hash": "BQpuXvyC13eUjE2aaNyyIw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateRange.html",
+          "hash": "7XITHDLwjTQM3TRanLdkDA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidatePattern.html",
+          "hash": "2ySTlabq4GpQUyj/11aatA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateLength.html",
+          "hash": "jj5b39bkkYM2tXgzyJBMWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.html",
+          "hash": "SyHKisOKiN6TwpPgW2L+qQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "UWiffkh2G+io8mkUOZYxEA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "fDA6xjl51AZOo3YiDMmxSA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

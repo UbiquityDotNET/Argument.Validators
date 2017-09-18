@@ -1,0 +1,11 @@
+{
+  "Ubiquity.ArgValidators": "Ubiquity.ArgValidators.yml",
+  "Ubiquity.ArgValidators.ValidatedNotNullAttribute": "Ubiquity.ArgValidators.ValidatedNotNullAttribute.yml",
+  "Ubiquity.ArgValidators.Validators": "Ubiquity.ArgValidators.Validators.yml",
+  "Ubiquity.ArgValidators.Validators.ValidateLength(System.String,System.Int32,System.Int32,System.String)": "Ubiquity.ArgValidators.Validators.yml",
+  "Ubiquity.ArgValidators.Validators.ValidateNotNull(System.Object,System.String)": "Ubiquity.ArgValidators.Validators.yml",
+  "Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace(System.String,System.String)": "Ubiquity.ArgValidators.Validators.yml",
+  "Ubiquity.ArgValidators.Validators.ValidatePattern(System.String,System.String,System.String)": "Ubiquity.ArgValidators.Validators.yml",
+  "Ubiquity.ArgValidators.Validators.ValidatePattern(System.String,System.Text.RegularExpressions.Regex,System.String)": "Ubiquity.ArgValidators.Validators.yml",
+  "Ubiquity.ArgValidators.Validators.ValidateRange``1(``0,``0,``0,System.String)": "Ubiquity.ArgValidators.Validators.yml"
+}

@@ -1,5 +1,6 @@
-# Argument.Validators
-Common annotation and argument validation support
+# Ubiquity.Argvalidators
+This namespace provides a set of common validators for method
+arguments to keep code simpler and more readable.
 
 ## Examples
 
@@ -15,4 +16,5 @@ public static object Load( string path, object foo, int bar )
     //...
 }
 ```
+
 
