@@ -1,13 +1,17 @@
 version: 1.0.{build}
 image: Visual Studio 2017
+configuration: Release
 
 nuget:
   project_feed: true
   disable_publish_on_pr: true
+
+before_build:
+- cmd: msbuild /t:Restore src/Argument.Validators/Ubiquity.ArgValidators.csproj
 
 build:
   project: src/Ubiquity.ArgValidators.sln
   verbosity: minimal
 
 artifacts:
-- path: src\**.nupkg
+- path: src/**/*.nupkg
