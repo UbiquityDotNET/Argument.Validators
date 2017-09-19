@@ -1,0 +1,80 @@
+<Project>
+    <!--
+    Description:
+        This property file is imported by the projects in this repository to set global locations
+        common to all of the projects for a consistent build.
+    -->
+    <!--
+    Allow for a parent to provide/override the defaults provided here
+    Projects importing this property sheet can still override those settings.
+
+    Implementation Note:
+        ALL properties defined here should be done conditionally to allow inheriting from
+        a parent. Conditional properties makes this project a well behaved sub module for
+        other projects that might want to set the build outputs etc... into a different place.
+    -->
+    <PropertyGroup>
+        <!-- Default to x86/Win32 | Debug build if not otherwise specified -->
+        <Platform Condition="'$(Platform)'=='' AND '$(MSBuildProjectExtension)'!='.vcxproj'">AnyCPU</Platform>
+        <Platform Condition="'$(Platform)'=='' AND '$(MSBuildProjectExtension)'=='.vcxproj'">Win32</Platform>
+        <Platform Condition="$(Platform)=='x86' AND '$(MSBuildProjectExtension)'=='.vcxproj'">Win32</Platform>
+        <UnifiedPlatformPathName Condition="'$(UnifiedPlatformPathName)'==''">$(Platform)</UnifiedPlatformPathName>
+        <UnifiedPlatformPathName Condition="'$(UnifiedPlatformPathName)'=='Win32'">x86</UnifiedPlatformPathName>
+        <UnifiedPlatformPathName Condition="'$(UnifiedPlatformPathName)'=='AnyCPU'">x86</UnifiedPlatformPathName>
+
+        <Configuration Condition="'$(Configuration)'==''">Debug</Configuration>
+
+        <!-- Use the location of this file (at the top of the build tree) to define the root directory, if not already set -->
+        <BuildRootDir Condition="'$(BuildRootDir)'==''">$(MSBuildThisFileDirectory)</BuildRootDir>
+        <BuildRootDir>$([MSBuild]::EnsureTrailingSlash("$(BuildRootDir)"))</BuildRootDir>
+
+        <!-- Put build output and intermediate output files into a well known location outside of the source tree -->
+        <BaseBuildOutputPath Condition="'$(BaseBuildOutputPath)'==''">$([MSBuild]::NormalizeDirectory("$(BuildRootDir)", "BuildOutput"))</BaseBuildOutputPath>
+        <BaseBuildOutputPath>$([MSBuild]::EnsureTrailingSlash("$(BaseBuildOutputPath)"))</BaseBuildOutputPath>
+
+        <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'==''" >$([MSBuild]::NormalizeDirectory("$(BaseBuildOutputPath)", "Intermediate", "$(MSBuildProjectName)"))</BaseIntermediateOutputPath>
+        <IntDir Condition="'$(IntDir)'==''">$([MSBuild]::NormalizeDirectory("$(BaseIntermediateOutputPath)", "$(UnifiedPlatformPathName)", "$(Configuration)"))</IntDir>
+        <BaseOutputPath Condition="'$(BaseOutputPath)'==''">$([MSBuild]::NormalizeDirectory("$(BaseBuildOutputPath)","bin", "$(MSBuildProjectName)"))</BaseOutputPath>
+        <PackageOutputPath Condition="'$(PackageOutputPath)'==''">$([MSBuild]::NormalizeDirectory("$(BaseBuildOutputPath)","NuGet"))</PackageOutputPath>
+
+        <BuildOutputPackagesDir Condition="'$(BuildOutputPackagesDir)'==''">$(BaseBuildOutputPath)packages\</BuildOutputPackagesDir>
+
+        <BuildVersionXmlFile Condition="'$(BuildVersionXmlFile)'==''">$(MSBuildThisFileDirectory)BuildVersion.xml</BuildVersionXmlFile>
+        <IsAutomatedBuild Condition="'$(IsAutomatedBuild)'=='' AND '$(APPVEYOR)'!=''">true</IsAutomatedBuild>
+        <IsAutomatedBuild Condition="'$(IsAutomatedBuild)'==''">false</IsAutomatedBuild>
+
+        <IsPullRequestBuild Condition="'$(IsPullRequestBuild)'=='' AND '$(APPVEYOR_PULL_REQUEST_NUMBER)'!=''">true</IsPullRequestBuild>
+        <IsPullRequestBuild Condition="'$(IsPullRequestBuild)'==''">false</IsPullRequestBuild>
+
+        <IsCIBuild Condition="'$(IsCIBuild)'=='' AND '$(APPVEYOR_REPO_TAG)'=='true' AND '$(APPVEYOR_PULL_REQUEST_NUMBER)'=='' AND '$(APPVEYOR_BRANCH)'=='master'">true</IsCIBuild>
+        <IsCIBuild Condition="'$(IsCIBuild)'==''">false</IsCIBuild>
+    </PropertyGroup>
+    <Choose>
+        <!-- TODO: Split this out so analyzers and common settings are in a common package for easier sharing amongst repositories and projects -->
+        <!-- Apply standard analyzers and rule sets for all C# projects -->
+        <When Condition="'$(MSBuildProjectExtension)'=='.csproj'">
+            <PropertyGroup>
+                <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)Ubiquity.NET.ruleset</CodeAnalysisRuleSet>
+                <EnableDefaultItems>false</EnableDefaultItems>
+                <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+                <Determenistic>true</Determenistic>
+            </PropertyGroup>
+            <ItemGroup>
+                <PackageReference Include="Microsoft.AnalyzerPowerPack" Version="1.1.0" PrivateAssets="All" />
+                <PackageReference Include="RefactoringEssentials" Version="5.2.0" PrivateAssets="All" />
+                <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="All" />
+            </ItemGroup>
+            <ItemGroup>
+                <None Include="$(MSBuildThisFileDirectory)Ubiquity.NET.ruleset" Link="Ubiquity.NET.ruleset" />
+            </ItemGroup>
+        </When>
+        <When Condition="'$(MSBuildProjectExtension)'=='.vcxproj'">
+            <!-- vcxproj uses a different pattern for output paths -->
+            <PropertyGroup>
+                <OutputPath Condition="'$(OutputPath)'==''">$([MSBuild]::NormalizeDirectory("$(BaseOutputPath)", "$(Configuration)", "$(UnifiedPlatformPathName)"))</OutputPath>
+                <OutputPath>$([MSBuild]::EnsureTrailingSlash("$(OutputPath)"))</OutputPath>
+                <OutDir Condition="'$(OutDir)'==''">$(OutputPath)</OutDir>
+            </PropertyGroup>
+        </When>
+    </Choose>
+</Project>

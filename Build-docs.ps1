@@ -1,3 +1,13 @@
+# Unfortunately, just getting docfx to successfully build requires a lot of undocumented
+# workarounds for several bugs. Most of the problems come from it's use of msbuild and
+# Roslyn causing build conflicts with dotnet and VS build. It is beyond me why a doc
+# generator tool needs to build a project, let alone why it needs to include the Roslyn
+# Compiler too... [sigh]...
+#
+# This script will manually install the packages needed to run docfx and the memperpage
+# plugin used for the documentation. The script then creates a VCVARS environment to run
+# docfx to work around the dependency and conflict problems with docfx and CoreCLR projects.
+
 function Find-OnPath
 {
     [CmdletBinding()]
@@ -99,7 +109,7 @@ function Merge-Environment( [hashtable]$OtherEnv, [string[]]$IgnoreNames )
                     'USERDOMAIN'
                    )
     $IgnoreNames += $SystemVars
-    $otherEnv.GetEnumerator() | ?{ !($ignoreNames -icontains $_.Name) } | %{ Set-Item -Path "env:$($_.Name)" -value $_.Value; Write-Verbose "env:$($_.Name)=$($_.Value)" }
+    $otherEnv.GetEnumerator() | ?{ !($ignoreNames -icontains $_.Name) } | %{ Set-Item -Path "env:$($_.Name)" -value $_.Value }
 }
 
 function Find-VSInstance([switch]$PreRelease)
@@ -112,33 +122,59 @@ function Find-VSInstance([switch]$PreRelease)
 
 function Initialize-VCVars($vsInstance = (Find-VSInstance))
 {
-    if($vsInstance)
+    if(!$env:VCINSTALLDIR)
     {
-        $vcEnv = Get-CmdEnvironment (Join-Path $vsInstance.InstallationPath 'VC\Auxiliary\Build\vcvarsall.bat') 'x86_amd64'
-        Merge-Environment $vcEnv @('Prompt')
-    }
-    else
-    {
-        Write-Error "VisualStudio instance not found"
+        Write-Verbose "VS Install: $vsInstance.InstallationPath"
+        if($vsInstance)
+        {
+            $vcEnv = Get-CmdEnvironment (Join-Path $vsInstance.InstallationPath 'VC\Auxiliary\Build\vcvarsall.bat') 'x86_amd64'
+            Merge-Environment $vcEnv @('Prompt')
+        }
+        else
+        {
+            Write-Error "VisualStudio instance not found"
+        }
     }
 }
 
+function Invoke-DocFx
+{
+    $docfxPath = Find-OnPath docfx.exe -ErrorAction Continue
+    if(!$docfxPath)
+    {
+        Invoke-NuGet install docfx.console -ExcludeVersion -OutputDirectory tools
+        $env:Path = "$env:Path;$(Join-Path $PSScriptRoot 'tools\docfx.console\tools')"
+    }
+    docfx $args
+}
+
+#--- Start of main script
 if( !( Test-Path -PathType Container tools ) )
 {
     md tools | out-null
 }
 
-# Unfortunately, just getting docfx to succesfully build is a lot of undocumented
-# workarounds for alot of bugs from it's use of msbuild and Roslyn, dotnet and VS
-# build conflicts. It is beyond me why a doc generator tool needs to build a project
-# let alone why it needs to include the Roslyn Compiler too... [sigh]...
-#
-# This script will manually install the packages needed to run docfx and the memperpage
-# plugin. Then creates a VCVARS environment to run docfx to work around the dependency
-# and conflict problems with docfx.
+Write-Information "Initializing VCVARS"
 Initialize-VCVars
 
-Invoke-NuGet install docfx.console -ExcludeVersion -OutputDirectory tools
-$env:Path = "$env:Path;$(Join-Path $PSScriptRoot 'tools\docfx.console\tools')"
-Invoke-NuGet install memberpage -ExcludeVersion -OutputDirectory tools
-docfx -t statictoc,tools\memberpage\content,templates\Ubiquity
+if(!(Test-Path 'tools\memberpage\content' -PathType Container))
+{
+    Write-Information "Fetching memberpage plugin and content"
+    Invoke-NuGet install memberpage -ExcludeVersion -OutputDirectory tools
+}
+
+Write-Information "Generating docs"
+# docfx is inconsistent on relative paths in the docfx.josn file
+# (i.e. Metadata[x].src[y].src is relative to the docfx.json file
+# but Metadata[x].dest is relative to the current directory.) So,
+# workaround the inconsistency by switching to the directory with
+# the docfx file so the difference is not relevant.
+pushd docfx
+try
+{
+    Invoke-Docfx docfx.json -t 'statictoc,templates\Ubiquity,..\tools\memberpage\content'
+}
+finally
+{
+    popd
+}

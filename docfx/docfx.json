@@ -1,0 +1,60 @@
+{
+  "metadata":
+  [
+    {
+      "src":
+      [
+        {
+          "files": [ "src/**.csproj"  ],
+          "exclude": [ "**/obj/**", "**/bin/**", ],
+          "src":".."
+        }
+      ],
+      "dest": "api",
+      "properties":
+      {
+          "TargetFramework": "net46"
+      }
+    }
+  ],
+  "build":
+  {
+    "content":
+    [
+      {
+        "files": [ "api/**.yml", "api/index.md" ]
+      },
+      {
+        "files": [ "toc.yml", "*.md" ],
+        "exclude": [ "obj/**" ]
+      }
+    ],
+    "resource":
+    [
+      {
+        "files": [ "images/**" ],
+        "exclude": [ "obj/**" ]
+      }
+    ],
+    "overwrite":
+    [
+      {
+        "files": [ "apidoc/**.md" ],
+        "exclude": [ "obj/**" ]
+      }
+    ],
+    "dest": "../docs",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "postProcessors": [],
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "globalMetadata" :
+    {
+      "_appTitle" : "Ubiquity.ArgValidators",
+      "_appFooter" : "Copyright (C) 2017, Ubiquity.NET",
+      "_disableBreadcrumb" : true
+    }
+  }
+}

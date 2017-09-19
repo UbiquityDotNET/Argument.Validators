@@ -1,27 +1,15 @@
 {
   "homepages": [],
-  "source_base_path": "D:/GitHub/Argument.Validators",
+  "source_base_path": "D:/GitHub/Argument.Validators/docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
-    {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html",
-          "hash": "ZI6jvOSnmdBM8w14eTwQMQ=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Ubiquity.ArgValidators.ValidatedNotNullAttribute.yml",
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.ValidatedNotNullAttribute.html",
-          "hash": "eJchoSJ/4Kpwo+krANQjGA=="
+          "hash": "p7mDRr/WjPvxePPvofIOaw=="
         }
       },
       "is_incremental": true,
@@ -33,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.Validators.html",
-          "hash": "kyVyxyxd8LitXxY3g0TQaw=="
+          "hash": "F+/nGb8632Wk3ifqmhYmCQ=="
         }
       },
       "is_incremental": true,
@@ -45,19 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html",
-          "hash": "XOfaIIugH/VOR/uR0U5F/A=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace.html",
-          "hash": "BQpuXvyC13eUjE2aaNyyIw=="
+          "hash": "SdAsqlrobFm3aUoFExiv8A=="
         }
       },
       "is_incremental": true,
@@ -69,19 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateRange.html",
-          "hash": "7XITHDLwjTQM3TRanLdkDA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidatePattern.html",
-          "hash": "2ySTlabq4GpQUyj/11aatA=="
+          "hash": "ed21MdwtYdwpGlt3DjyLuw=="
         }
       },
       "is_incremental": true,
@@ -93,7 +57,31 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateLength.html",
-          "hash": "jj5b39bkkYM2tXgzyJBMWg=="
+          "hash": "RW1wEwwNOFDG1q6qSvmyTg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidatePattern.html",
+          "hash": "T8yF4aaft7YAify2apKqOA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace.html",
+          "hash": "V3Fg0IYW7UpFISOwshUPqA=="
         }
       },
       "is_incremental": true,
@@ -105,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.html",
-          "hash": "SyHKisOKiN6TwpPgW2L+qQ=="
+          "hash": "V+firmY6a7MbpMmXlXLW/w=="
         }
       },
       "is_incremental": true,
@@ -117,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "UWiffkh2G+io8mkUOZYxEA=="
+          "hash": "8wIH34fAo10WblLuGriZSA=="
         }
       },
       "is_incremental": true,
@@ -129,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "fDA6xjl51AZOo3YiDMmxSA=="
+          "hash": "OcCPRLSYRFi4/vub4W51lw=="
         }
       },
       "is_incremental": true,
@@ -148,14 +136,6 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build"
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -164,6 +144,14 @@
         "RestApiDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         }
       }

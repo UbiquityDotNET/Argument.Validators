@@ -17,6 +17,7 @@
     <PackageLicenseUrl>https://github.com/UbiquityDotNET/Argument.Validators/blob/master/LICENSE</PackageLicenseUrl>
     <PackageTags>.NET, Parameter Validation</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Copyright (c) 2017 Ubiquity.NET</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Validators.cs" />
