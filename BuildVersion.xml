@@ -1,0 +1,7 @@
+<BuildVersionData
+    ReleaseBranch="master"
+    BuildMajor = "0"
+    BuildMinor = "2"
+    BuildPatch = "0"
+    PreReleaseName = "alpha"
+/>

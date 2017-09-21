@@ -19,6 +19,21 @@ references:
   commentId: T:Ubiquity.ArgValidators.Validators
   fullName: Ubiquity.ArgValidators.Validators
   nameWithType: Validators
+- uid: Ubiquity.ArgValidators.Validators.ValidateDefined*
+  name: ValidateDefined
+  href: api/Ubiquity.ArgValidators.Validators.ValidateDefined.html
+  commentId: Overload:Ubiquity.ArgValidators.Validators.ValidateDefined
+  fullName: Ubiquity.ArgValidators.Validators.ValidateDefined
+  nameWithType: Validators.ValidateDefined
+- uid: Ubiquity.ArgValidators.Validators.ValidateDefined``1(``0,System.String)
+  name: ValidateDefined<T>(T, String)
+  href: api/Ubiquity.ArgValidators.Validators.ValidateDefined.html#Ubiquity_ArgValidators_Validators_ValidateDefined__1___0_System_String_
+  commentId: M:Ubiquity.ArgValidators.Validators.ValidateDefined``1(``0,System.String)
+  name.vb: ValidateDefined(Of T)(T, String)
+  fullName: Ubiquity.ArgValidators.Validators.ValidateDefined<T>(T, System.String)
+  fullName.vb: Ubiquity.ArgValidators.Validators.ValidateDefined(Of T)(T, System.String)
+  nameWithType: Validators.ValidateDefined<T>(T, String)
+  nameWithType.vb: Validators.ValidateDefined(Of T)(T, String)
 - uid: Ubiquity.ArgValidators.Validators.ValidateLength(System.String,System.Int32,System.Int32,System.String)
   name: ValidateLength(String, Int32, Int32, String)
   href: api/Ubiquity.ArgValidators.Validators.ValidateLength.html#Ubiquity_ArgValidators_Validators_ValidateLength_System_String_System_Int32_System_Int32_System_String_
@@ -31,18 +46,33 @@ references:
   commentId: Overload:Ubiquity.ArgValidators.Validators.ValidateLength
   fullName: Ubiquity.ArgValidators.Validators.ValidateLength
   nameWithType: Validators.ValidateLength
-- uid: Ubiquity.ArgValidators.Validators.ValidateNotNull(System.Object,System.String)
-  name: ValidateNotNull(Object, String)
-  href: api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html#Ubiquity_ArgValidators_Validators_ValidateNotNull_System_Object_System_String_
-  commentId: M:Ubiquity.ArgValidators.Validators.ValidateNotNull(System.Object,System.String)
-  fullName: Ubiquity.ArgValidators.Validators.ValidateNotNull(System.Object, System.String)
-  nameWithType: Validators.ValidateNotNull(Object, String)
+- uid: Ubiquity.ArgValidators.Validators.ValidateNotNull(System.IntPtr,System.String)
+  name: ValidateNotNull(IntPtr, String)
+  href: api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html#Ubiquity_ArgValidators_Validators_ValidateNotNull_System_IntPtr_System_String_
+  commentId: M:Ubiquity.ArgValidators.Validators.ValidateNotNull(System.IntPtr,System.String)
+  fullName: Ubiquity.ArgValidators.Validators.ValidateNotNull(System.IntPtr, System.String)
+  nameWithType: Validators.ValidateNotNull(IntPtr, String)
+- uid: Ubiquity.ArgValidators.Validators.ValidateNotNull(System.UIntPtr,System.String)
+  name: ValidateNotNull(UIntPtr, String)
+  href: api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html#Ubiquity_ArgValidators_Validators_ValidateNotNull_System_UIntPtr_System_String_
+  commentId: M:Ubiquity.ArgValidators.Validators.ValidateNotNull(System.UIntPtr,System.String)
+  fullName: Ubiquity.ArgValidators.Validators.ValidateNotNull(System.UIntPtr, System.String)
+  nameWithType: Validators.ValidateNotNull(UIntPtr, String)
 - uid: Ubiquity.ArgValidators.Validators.ValidateNotNull*
   name: ValidateNotNull
   href: api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html
   commentId: Overload:Ubiquity.ArgValidators.Validators.ValidateNotNull
   fullName: Ubiquity.ArgValidators.Validators.ValidateNotNull
   nameWithType: Validators.ValidateNotNull
+- uid: Ubiquity.ArgValidators.Validators.ValidateNotNull``1(``0,System.String)
+  name: ValidateNotNull<T>(T, String)
+  href: api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html#Ubiquity_ArgValidators_Validators_ValidateNotNull__1___0_System_String_
+  commentId: M:Ubiquity.ArgValidators.Validators.ValidateNotNull``1(``0,System.String)
+  name.vb: ValidateNotNull(Of T)(T, String)
+  fullName: Ubiquity.ArgValidators.Validators.ValidateNotNull<T>(T, System.String)
+  fullName.vb: Ubiquity.ArgValidators.Validators.ValidateNotNull(Of T)(T, System.String)
+  nameWithType: Validators.ValidateNotNull<T>(T, String)
+  nameWithType.vb: Validators.ValidateNotNull(Of T)(T, String)
 - uid: Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace(System.String,System.String)
   name: ValidateNotNullOrWhiteSpace(String, String)
   href: api/Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace.html#Ubiquity_ArgValidators_Validators_ValidateNotNullOrWhiteSpace_System_String_System_String_

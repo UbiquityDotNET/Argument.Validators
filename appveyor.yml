@@ -3,7 +3,8 @@ image: Visual Studio 2017
 configuration: Release
 
 nuget:
-  project_feed: true
+  account_feed: false
+  project_feed: false
   disable_publish_on_pr: true
 
 before_build:

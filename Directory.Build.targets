@@ -1,6 +1,9 @@
 <Project>
-  <!--
-  Repository wide Targets support
-  -->
-  
+  <!-- Update APPVEYOR with the build number  -->
+    <Target Name="UpdateAppVeyorBuildDetails"
+            AfterTargets="PrepareVersioningForBuild"
+            Condition="'$(APPVEYOR)'!=''"
+            >
+        <Exec Command="appveyor UpdateBuild $(FullBuildNumber)"/>
+    </Target>
 </Project>

@@ -1,12 +1,12 @@
-# Unfortunately, just getting docfx to successfully build requires a lot of undocumented
-# workarounds for several bugs. Most of the problems come from it's use of msbuild and
-# Roslyn causing build conflicts with dotnet and VS build. It is beyond me why a doc
+# Unfortunately, just getting DOCFX to successfully build requires a lot of undocumented
+# workarounds for several bugs. Most of the problems come from it's use of MSBuild and
+# Roslyn causing build conflicts with DotNet and VS build. It is beyond me why a doc
 # generator tool needs to build a project, let alone why it needs to include the Roslyn
 # Compiler too... [sigh]...
 #
-# This script will manually install the packages needed to run docfx and the memperpage
-# plugin used for the documentation. The script then creates a VCVARS environment to run
-# docfx to work around the dependency and conflict problems with docfx and CoreCLR projects.
+# This script will manually install the packages needed to run DOCFX and the memperpage
+# plug-in used for the documentation. The script then creates a VCVARS environment to run
+# DOCFX to work around the dependency and conflict problems with DOCFX and CoreCLR projects.
 
 function Find-OnPath
 {
@@ -164,11 +164,11 @@ if(!(Test-Path 'tools\memberpage\content' -PathType Container))
 }
 
 Write-Information "Generating docs"
-# docfx is inconsistent on relative paths in the docfx.josn file
+# DOCFX is inconsistent on relative paths in the docfx.josn file
 # (i.e. Metadata[x].src[y].src is relative to the docfx.json file
 # but Metadata[x].dest is relative to the current directory.) So,
 # workaround the inconsistency by switching to the directory with
-# the docfx file so the difference is not relevant.
+# the DOCFX file so the difference is not relevant.
 pushd docfx
 try
 {

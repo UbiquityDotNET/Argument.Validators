@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Method ValidateLength
+    <title>Method ValidateDefined
    | Ubiquity.ArgValidators </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Method ValidateLength
+    <meta name="title" content="Method ValidateDefined
    | Ubiquity.ArgValidators ">
     <meta name="generator" content="docfx 2.24.0.0">
     
@@ -83,11 +83,11 @@
                             <a href="Ubiquity.ArgValidators.Validators.html" title="Validators" class="">Validators</a>
                               
                               <ul class="nav level3">
-                                <li class="">
-                                  <a href="Ubiquity.ArgValidators.Validators.ValidateDefined.html" title="ValidateDefined" class="">ValidateDefined</a>
-                                </li>
                                 <li class="active">
-                                  <a href="Ubiquity.ArgValidators.Validators.ValidateLength.html" title="ValidateLength" class="active">ValidateLength</a>
+                                  <a href="Ubiquity.ArgValidators.Validators.ValidateDefined.html" title="ValidateDefined" class="active">ValidateDefined</a>
+                                </li>
+                                <li class="">
+                                  <a href="Ubiquity.ArgValidators.Validators.ValidateLength.html" title="ValidateLength" class="">ValidateLength</a>
                                 </li>
                                 <li class="">
                                   <a href="Ubiquity.ArgValidators.Validators.ValidateNotNull.html" title="ValidateNotNull" class="">ValidateNotNull</a>
@@ -110,29 +110,28 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Ubiquity.ArgValidators.Validators.ValidateLength*">
+            <article class="content wrap" id="_content" data-uid="Ubiquity.ArgValidators.Validators.ValidateDefined*">
 
-<h1 id="Ubiquity_ArgValidators_Validators_ValidateLength_" data-uid="Ubiquity.ArgValidators.Validators.ValidateLength*">Method ValidateLength
+<h1 id="Ubiquity_ArgValidators_Validators_ValidateDefined_" data-uid="Ubiquity.ArgValidators.Validators.ValidateDefined*">Method ValidateDefined
 </h1>
 <div class="markdown level0 summary"></div>
 <div class="markdown level0 conceptual"></div>
 
 <span class="small pull-right mobile-hide">
   <span class="divider">|</span>
-  <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateLength_System_String_System_Int32_System_Int32_System_String_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateLength(System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateDefined__1___0_System_String_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateDefined%60%601(%60%600%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L165">View Source</a>
+  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L187">View Source</a>
 </span>
-<a id="Ubiquity_ArgValidators_Validators_ValidateLength_" data-uid="Ubiquity.ArgValidators.Validators.ValidateLength*"></a>
-<h4 id="Ubiquity_ArgValidators_Validators_ValidateLength_System_String_System_Int32_System_Int32_System_String_" data-uid="Ubiquity.ArgValidators.Validators.ValidateLength(System.String,System.Int32,System.Int32,System.String)">ValidateLength(String, Int32, Int32, String)</h4>
-<div class="markdown level1 summary"><p>Validates a string length falls within a specific range</p>
+<a id="Ubiquity_ArgValidators_Validators_ValidateDefined_" data-uid="Ubiquity.ArgValidators.Validators.ValidateDefined*"></a>
+<h4 id="Ubiquity_ArgValidators_Validators_ValidateDefined__1___0_System_String_" data-uid="Ubiquity.ArgValidators.Validators.ValidateDefined``1(``0,System.String)">ValidateDefined&lt;T&gt;(T, String)</h4>
+<div class="markdown level1 summary"><p>Validates that a value is defined on the Enum type</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">[ContractAnnotation(&quot;value:null =&gt; halt&quot;)]
-public static string ValidateLength(this string value, int min, int max, [InvokerParameterName] string paramName)</code></pre>
+  <pre><code class="lang-csharp hljs">public static T ValidateDefined&lt;T&gt;(this T value, [InvokerParameterName] string paramName)where T : struct, IConvertible, IComparable, IFormattable</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -145,27 +144,15 @@ public static string ValidateLength(this string value, int min, int max, [Invoke
   </thead>
   <tbody>
     <tr>
-      <td><span class="xref">System.String</span></td>
+      <td><span class="xref">T</span></td>
       <td><span class="parametername">value</span></td>
-      <td><p>String to validate</p>
-</td>
-    </tr>
-    <tr>
-      <td><span class="xref">System.Int32</span></td>
-      <td><span class="parametername">min</span></td>
-      <td><p>Minimum allowed number of characters in the string</p>
-</td>
-    </tr>
-    <tr>
-      <td><span class="xref">System.Int32</span></td>
-      <td><span class="parametername">max</span></td>
-      <td><p>Maximum allowed number of characters in the string</p>
+      <td><p>Value to check is defined</p>
 </td>
     </tr>
     <tr>
       <td><span class="xref">System.String</span></td>
       <td><span class="parametername">paramName</span></td>
-      <td><p>Name of the parameter for the exception message if <code data-dev-comment-type="paramref" class="paramref">value</code> length is outside the specified range</p>
+      <td><p>name of the parameter owning the value</p>
 </td>
     </tr>
   </tbody>
@@ -180,16 +167,32 @@ public static string ValidateLength(this string value, int min, int max, [Invoke
   </thead>
   <tbody>
     <tr>
-      <td><span class="xref">System.String</span></td>
+      <td><span class="xref">T</span></td>
       <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">T</span></td>
+      <td><p>Enumeration type</p>
+</td>
     </tr>
   </tbody>
 </table>
 </article>
           </div>
           <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateLength_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateLength*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L165" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
+              <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateDefined_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateDefined*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L187" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
