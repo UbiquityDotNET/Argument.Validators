@@ -22,8 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSemVer.GitBuild" Version="0.3.1" />
+    <PackageReference Include="CSemVer.GitBuild" Version="0.3.1" PrivetAssets="All" />
     <PackageReference Include="JetBrains.Annotations" Version="11.0.0" />
   </ItemGroup>
-
 </Project>
