@@ -4,6 +4,7 @@
             AfterTargets="PrepareVersioningForBuild"
             Condition="'$(APPVEYOR)'!=''"
             >
+        <Message Importance="high" Text="Updating BuildNumber: $(FullBuildNumber)" />
         <Exec Command="appveyor UpdateBuild $(FullBuildNumber)"/>
     </Target>
 </Project>
