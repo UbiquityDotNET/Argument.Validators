@@ -4,7 +4,7 @@
     <EnableDefaultItems>false</EnableDefaultItems>
     <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
     <Determenistic>true</Determenistic>
-    <Authors>UbiquityNET</Authors>
+    <Authors>Ubiquity.NET Contributors</Authors>
     <Company>Ubiquity.NET</Company>
     <Product>Ubiquity.NET</Product>
     <Description>.NET Method parameter validation library</Description>
@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSemVer.GitBuild" Version="[0.3.1]" PrivateAssets="All"/>
+    <PackageReference Include="CSemVer.GitBuild.Tasks" Version="0.7.0-alpha.1" />
     <PackageReference Include="JetBrains.Annotations" Version="11.0.0" />
   </ItemGroup>
 </Project>
