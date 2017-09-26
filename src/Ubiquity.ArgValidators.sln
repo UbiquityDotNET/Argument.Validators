@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ubiquity.ArgValidators", "Argument.Validators\Ubiquity.ArgValidators.csproj", "{16660D7A-0262-4CB8-A73F-8519561023EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BBF654AA-25D4-4887-9CEA-CC5F78FDC010}"
 	ProjectSection(SolutionItems) = preProject
+		..\appveyor.yml = ..\appveyor.yml
 		..\Build-docs.ps1 = ..\Build-docs.ps1
+		..\BuildVersion.xml = ..\BuildVersion.xml
+		..\Directory.Build.props = ..\Directory.Build.props
+		..\Directory.Build.targets = ..\Directory.Build.targets
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Global

@@ -1,7 +1,7 @@
 <BuildVersionData
     ReleaseBranch="master"
     BuildMajor = "0"
-    BuildMinor = "2"
+    BuildMinor = "3"
     BuildPatch = "0"
     PreReleaseName = "alpha"
 />

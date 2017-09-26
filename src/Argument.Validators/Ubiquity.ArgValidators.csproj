@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSemVer.GitBuild.Tasks" Version="0.7.0-alpha.1" />
+    <PackageReference Include="CSemVer.Build.Tasks" Version="1.0.0-alpha.1--ci-REL.424565894" />
     <PackageReference Include="JetBrains.Annotations" Version="11.0.0" />
   </ItemGroup>
 </Project>
