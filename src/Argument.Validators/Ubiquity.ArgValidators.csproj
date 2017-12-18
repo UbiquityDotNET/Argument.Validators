@@ -16,6 +16,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Copyright (c) 2017 Ubiquity.NET</Copyright>
     <NoPackageAnalysis>true</NoPackageAnalysis>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Validators.cs" />

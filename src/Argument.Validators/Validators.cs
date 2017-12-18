@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
@@ -17,6 +18,23 @@ namespace Ubiquity.ArgValidators
     /// <summary>Parameter validation extension set</summary>
     public static class Validators
     {
+        /// <summary>Verifies a that a value is not equal to the default for the type</summary>
+        /// <typeparam name="T">Type of value to test for</typeparam>
+        /// <param name="value">Value to test</param>
+        /// <param name="paramName">Name of the parameter for the argument exception generated</param>
+        /// <returns><paramref name="value"/> for fluent design usage</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is the default value for value types or <see lang="null"/> for reference types</exception>
+        [DebuggerStepThrough]
+        public static T ValidateNotDefault<T>( [ValidatedNotNull] this T value, [InvokerParameterName] string paramName )
+        {
+            if( EqualityComparer<T>.Default.Equals( value, default ) )
+            {
+                throw new ArgumentNullException( paramName );
+            }
+
+            return value;
+        }
+
         /// <summary>Verifies an object isn't null</summary>
         /// <param name="value">Object instance to check</param>
         /// <param name="paramName">Name of the parameter for the exception if <paramref name="value"/> is null</param>
