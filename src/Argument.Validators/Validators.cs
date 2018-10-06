@@ -68,8 +68,8 @@ namespace Ubiquity.ArgValidators
 
         /// <summary>Verifies an UIntPtr isn't null</summary>
         /// <param name="value">value to check</param>
-        /// <param name="paramName">Name of the parameter for the exception if <paramref name="obj"/> is null</param>
-        [ContractAnnotation( "obj:null => halt" )]
+        /// <param name="paramName">Name of the parameter for the exception if <paramref name="value"/> is null</param>
+        [ContractAnnotation( "value:null => halt" )]
         [DebuggerStepThrough]
         public static UIntPtr ValidateNotNull( this UIntPtr value, [InvokerParameterName] string paramName )
         {
@@ -84,7 +84,7 @@ namespace Ubiquity.ArgValidators
         /// <summary>Validates a parameter string is not null or white space</summary>
         /// <param name="value">string to test</param>
         /// <param name="paramName">Name of the parameter for the exception if the <paramref name="value"/> is null or whitespace</param>
-        [ContractAnnotation( "str:null => halt" )]
+        [ContractAnnotation( "value:null => halt" )]
         [DebuggerStepThrough]
         public static void ValidateNotNullOrWhiteSpace( [ValidatedNotNull] this string value, [InvokerParameterName] string paramName )
         {
@@ -201,9 +201,9 @@ namespace Ubiquity.ArgValidators
         /// <typeparam name="T">Enumeration type</typeparam>
         /// <param name="value">Value to check is defined</param>
         /// <param name="paramName">name of the parameter owning the value</param>
-        /// <returns></returns>
+        /// <returns><paramref name="value"/>for fluent use</returns>
         public static T ValidateDefined<T>( this T value, [InvokerParameterName]string paramName )
-            where T : struct, IConvertible, IComparable, IFormattable
+            where T : System.Enum
         {
             if( !Enum.IsDefined( typeof( T ), value ) )
             {

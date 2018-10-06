@@ -43,7 +43,7 @@
         "exclude": [ "obj/**" ]
       }
     ],
-    "dest": "../docs",
+    "dest": "../BuildOutput/docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "postProcessors": [],

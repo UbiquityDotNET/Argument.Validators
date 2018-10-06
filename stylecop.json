@@ -1,0 +1,48 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings":
+  {
+        "indentation":
+        {
+            "indentationSize": 4,
+            "tabSize": 4,
+            "useTabs": false
+        },
+        "namingRules":
+        {
+            "allowCommonHungarianPrefixes": false,
+            "allowedHungarianPrefixes": ["h", "di", "op", "os", "ir", "is", "do"]
+        },
+        "orderingRules":
+        {
+            "elementOrder": [ "constant", "accessibility", "static", "readonly" ],
+            "systemUsingDirectivesFirst": true,
+            "usingDirectivesPlacement": "outsideNamespace",
+            "blankLinesBetweenUsingGroups": "allow"
+        },
+        "maintainabilityRules":
+        {
+            "topLevelTypes": ["class"]
+        },
+        "layoutRules":
+        {
+            "newlineAtEndOfFile": "require",
+            "allowConsecutiveUsings": true
+        },
+        "documentationRules":
+        {
+            "companyName": "Ubiquity.NET Contributors",
+            "headerDecoration": "-----------------------------------------------------------------------",
+            "documentExposedElements": true,
+            "documentInterfaces": true,
+            "documentInternalElements": false,
+            "documentPrivateElements": false,
+            "documentPrivateFields": false,
+            "documentationCulture":"en-us"
+        },
+        "readabilityRules":
+        {
+            "allowBuiltInTypeAliases": true
+        }
+  }
+}

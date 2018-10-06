@@ -4,6 +4,7 @@
   "Ubiquity.ArgValidators.Validators": "Ubiquity.ArgValidators.Validators.yml",
   "Ubiquity.ArgValidators.Validators.ValidateDefined``1(``0,System.String)": "Ubiquity.ArgValidators.Validators.yml",
   "Ubiquity.ArgValidators.Validators.ValidateLength(System.String,System.Int32,System.Int32,System.String)": "Ubiquity.ArgValidators.Validators.yml",
+  "Ubiquity.ArgValidators.Validators.ValidateNotDefault``1(``0,System.String)": "Ubiquity.ArgValidators.Validators.yml",
   "Ubiquity.ArgValidators.Validators.ValidateNotNull(System.IntPtr,System.String)": "Ubiquity.ArgValidators.Validators.yml",
   "Ubiquity.ArgValidators.Validators.ValidateNotNull(System.UIntPtr,System.String)": "Ubiquity.ArgValidators.Validators.yml",
   "Ubiquity.ArgValidators.Validators.ValidateNotNull``1(``0,System.String)": "Ubiquity.ArgValidators.Validators.yml",

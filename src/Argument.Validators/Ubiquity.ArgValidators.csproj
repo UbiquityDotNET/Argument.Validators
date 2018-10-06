@@ -1,8 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net46;netstandard1.3</TargetFrameworks>
-    <EnableDefaultItems>false</EnableDefaultItems>
-    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
     <Determenistic>true</Determenistic>
     <Authors>Ubiquity.NET Contributors</Authors>
     <Company>Ubiquity.NET</Company>
@@ -14,16 +12,17 @@
     <PackageLicenseUrl>https://github.com/UbiquityDotNET/Argument.Validators/blob/master/LICENSE</PackageLicenseUrl>
     <PackageTags>.NET, Parameter Validation</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>Copyright (c) 2017 Ubiquity.NET</Copyright>
+    <Copyright>Copyright (c) 2017 Ubiquity.NET Contributors</Copyright>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    <LangVersion>7.1</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Validators.cs" />
+    <!--Keep docfx generated OBJ folder junk from cluttering solution view-->
+    <Compile Remove="obj\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="obj\**" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="CSemVer.Build.Tasks" Version="1.0.0-alpha.1--ci-REL.424565894" />
     <PackageReference Include="JetBrains.Annotations" Version="11.0.0" />
   </ItemGroup>
 </Project>
