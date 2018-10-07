@@ -24,10 +24,10 @@ pushd .\BuildOutput\docs -ErrorAction Stop
 try
 {
     Write-Information "Adding files to git"
-    git add *
+    git add * | Out-File -Append docs-commit.log
 
     Write-Information "Committing changes to git"
-    git commit -m "CI Docs Update ($env:APPVEYOR_BUILD_VERSION)"
+    git commit -m "CI Docs Update ($env:APPVEYOR_BUILD_VERSION)" | Out-File -Append docs-commit.log
 
     Write-Information "pushing changes to git"
     git push -q
