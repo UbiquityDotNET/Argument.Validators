@@ -36,7 +36,7 @@ deploy_script:
   - ps: .\Push-Docs.ps1
 
 test_script:
-  - dotnet test .\src\ArgValidator.Tests\ArgValidator.Tests.csproj
+  - dotnet test .\src\ArgValidator.Tests\ArgValidator.Tests.csproj -c Release --no-build -l Appveyor
 
 artifacts:
   - path: BuildOutput/NuGet/**/*.nupkg
