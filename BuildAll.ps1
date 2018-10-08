@@ -78,6 +78,9 @@ try
         pushd BuildOutput -ErrorAction Stop
         try
         {
+            # restore auto line endings for the docs to prevent noisy add/commit warnings
+            git config --global core.safecrlf true
+            git config --global core.autocrlf true
             git clone https://github.com/UbiquityDotNET/Argument.Validators.git -b gh-pages docs -q
         }
         finally
