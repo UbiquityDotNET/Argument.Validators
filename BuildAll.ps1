@@ -78,13 +78,10 @@ try
         pushd BuildOutput -ErrorAction Stop
         try
         {
-            # restore auto line endings for the docs to prevent noisy add/commit warnings
-            git config --global core.safecrlf true
-            git config --global core.autocrlf true
             git clone https://github.com/UbiquityDotNET/Argument.Validators.git -b gh-pages docs -q
 
             # purge all current files so that they don't remain if the newly generated content doesn't need it.
-            del docs\* -Recurse -Force | Out-Null
+            Get-ChildItem * -exclude .git | Remove-Item -recurse -force
         }
         finally
         {
@@ -98,12 +95,6 @@ try
     Write-Information "Building Solution"
     Invoke-MSBuild -Targets Build -Project src\Ubiquity.ArgValidators.sln -Properties $msBuildProperties -LoggerArgs $msbuildLoggerArgs ($msbuildLoggerArgs + @("/bl:Ubiquity.ArgValidators-build.binlog") )
 
-    #Write-Information "Restoring Docs Project"
-    #Invoke-MSBuild -Targets Restore -Project docfx\DocFX.csproj -Properties $msBuildProperties -LoggerArgs $msbuildLoggerArgs ($msbuildLoggerArgs + @("/bl:docfx-restore.binlog") )
-
-    #Write-Information "Building Docs"
-    #Invoke-MSBuild -Targets Build -Project docfx\DocFX.csproj -Properties $msBuildProperties -LoggerArgs $msbuildLoggerArgs ($msbuildLoggerArgs + @("/bl:docfx-build.binlog") )
-    
     if( $env:APPVEYOR_PULL_REQUEST_NUMBER )
     {
         foreach( $item in Get-ChildItem *.binlog )
