@@ -9,7 +9,7 @@ try
     # This ensures that the links to source in the generated docs will have the correct URLs
     # (e.g. docs pushed to the official repository MUST not have links to source in some private fork)
     $remoteUrl = git ls-remote --get-url
-    if($remoteUrl -ne "https://github.com/UbiquityDotNET/Argument.Validators")
+    if($remoteUrl -ne "https://github.com/UbiquityDotNET/Argument.Validators.git")
     {
         throw "Pushing docs is only allowed when the origin remote is the official source release. Current remote: $remoteUrl"
     }
