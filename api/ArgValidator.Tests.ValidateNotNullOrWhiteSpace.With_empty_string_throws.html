@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Method ValidateDefined
+    <title>Method With_empty_string_throws
    | Ubiquity.ArgValidators </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Method ValidateDefined
+    <meta name="title" content="Method With_empty_string_throws
    | Ubiquity.ArgValidators ">
     <meta name="generator" content="docfx 2.39.0.0">
     
@@ -137,8 +137,8 @@
                             <a href="ArgValidator.Tests.ValidateNotNullOrWhiteSpace.html" title="ValidateNotNullOrWhiteSpace" class="">ValidateNotNullOrWhiteSpace</a>
                               
                               <ul class="nav level3">
-                                <li class="">
-                                  <a href="ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_empty_string_throws.html" title="With_empty_string_throws" class="">With_empty_string_throws</a>
+                                <li class="active">
+                                  <a href="ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_empty_string_throws.html" title="With_empty_string_throws" class="active">With_empty_string_throws</a>
                                 </li>
                                 <li class="">
                                   <a href="ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_null_throws.html" title="With_null_throws" class="">With_null_throws</a>
@@ -167,8 +167,8 @@
                             <a href="Ubiquity.ArgValidators.Validators.html" title="Validators" class="">Validators</a>
                               
                               <ul class="nav level3">
-                                <li class="active">
-                                  <a href="Ubiquity.ArgValidators.Validators.ValidateDefined.html" title="ValidateDefined" class="active">ValidateDefined</a>
+                                <li class="">
+                                  <a href="Ubiquity.ArgValidators.Validators.ValidateDefined.html" title="ValidateDefined" class="">ValidateDefined</a>
                                 </li>
                                 <li class="">
                                   <a href="Ubiquity.ArgValidators.Validators.ValidateLength.html" title="ValidateLength" class="">ValidateLength</a>
@@ -197,66 +197,35 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Ubiquity.ArgValidators.Validators.ValidateDefined*">
+            <article class="content wrap" id="_content" data-uid="ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_empty_string_throws*">
 
-<h1 id="Ubiquity_ArgValidators_Validators_ValidateDefined_" data-uid="Ubiquity.ArgValidators.Validators.ValidateDefined*">Method ValidateDefined
+<h1 id="ArgValidator_Tests_ValidateNotNullOrWhiteSpace_With_empty_string_throws_" data-uid="ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_empty_string_throws*">Method With_empty_string_throws
 </h1>
 <div class="markdown level0 summary"></div>
 <div class="markdown level0 conceptual"></div>
 
 <span class="small pull-right mobile-hide">
   <span class="divider">&nbsp;</span>
-  <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateDefined__1___0_System_String_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateDefined%60%601(%60%600%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab-small btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+  <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=ArgValidator_Tests_ValidateNotNullOrWhiteSpace_With_empty_string_throws.md&amp;value=---%0Auid%3A%20ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_empty_string_throws%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab-small btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L216" title="View Source" class="fab-small btn-info pull-right"><i class="fa fa-code"></i></a>
+  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/ArgValidator.Tests/ValidateNotNullOrWhiteSpace.cs/#L27" title="View Source" class="fab-small btn-info pull-right"><i class="fa fa-code"></i></a>
 </span>
-<a id="Ubiquity_ArgValidators_Validators_ValidateDefined_" data-uid="Ubiquity.ArgValidators.Validators.ValidateDefined*"></a>
-<h2 id="Ubiquity_ArgValidators_Validators_ValidateDefined__1___0_System_String_" data-uid="Ubiquity.ArgValidators.Validators.ValidateDefined``1(``0,System.String)">ValidateDefined&lt;T&gt;(T, String)</h2>
-<div class="markdown level1 summary"><p>Validates that a value is defined on the Enum type</p>
-</div>
+<a id="ArgValidator_Tests_ValidateNotNullOrWhiteSpace_With_empty_string_throws_" data-uid="ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_empty_string_throws*"></a>
+<h2 id="ArgValidator_Tests_ValidateNotNullOrWhiteSpace_With_empty_string_throws" data-uid="ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_empty_string_throws">With_empty_string_throws()</h2>
+<div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h3 class="decalaration">Declaration
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static T ValidateDefined&lt;T&gt;(this T value, [InvokerParameterName] string paramName)
-    where T : Enum</code></pre>
+  <pre><code class="lang-csharp hljs">[TestMethod]
+[ExpectedException(typeof(ArgumentException))]
+public void With_empty_string_throws()</code></pre>
 </div>
-<h2 class="parameters">Parameters</h2>
-<table class="table table-bordered table-striped table-condensed">
-    <tr>
-      <td><span class="xref">T</span></td>
-      <td><span class="parametername">value</span></td>
-      <td><p>Value to check is defined</p>
-</td>
-    </tr>
-    <tr>
-      <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
-      <td><span class="parametername">paramName</span></td>
-      <td><p>name of the parameter owning the value</p>
-</td>
-    </tr>
-</table>
-<h2 class="returns">Returns</h2>
-<table class="table table-bordered table-striped table-condensed">
-    <tr>
-      <td><span class="xref">T</span></td>
-      <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> for fluent design usage</p>
-</td>
-    </tr>
-</table>
-<h2 class="typeParameters">Type Parameters</h2>
-<table class="table table-bordered table-striped table-condensed">
-    <tr>
-      <td><span class="parametername">T</span></td>
-      <td><p>Enumeration type</p>
-</td>
-    </tr>
-</table>
 </h3></article>
           </div>
           <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateDefined_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateDefined*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L216" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
+              <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=ArgValidator_Tests_ValidateNotNullOrWhiteSpace_With_empty_string_throws_.md&amp;value=---%0Auid%3A%20ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_empty_string_throws*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/ArgValidator.Tests/ValidateNotNullOrWhiteSpace.cs/#L27" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

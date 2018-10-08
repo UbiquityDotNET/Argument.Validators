@@ -5,95 +5,299 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotDefault.With_default_of_valuetype_throws.html",
+          "hash": "jjZR9ye3Se1D8DOPET6Dfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotDefault.With_nondefault_valuetype_succeeds.html",
+          "hash": "go+PecEHjLp0JzdSQGzKtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotDefault.With_nondefault_valuetype_returns_input_value.html",
+          "hash": "jgeMe1baW7kKJq1BZoPbZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotDefault.With_default_of_reftype_throws.html",
+          "hash": "YYuoia13SS0UTELp3UeMkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotDefault.With_nondefault_refype_succeeds.html",
+          "hash": "paToEcL4jCUZMOiIQHEO7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotDefault.With_nondefault_reftype_returns_input_value.html",
+          "hash": "KSmw608xg7gv628GdpnaFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotDefault.html",
+          "hash": "wfW4NkZ7JqZMFAP2Nh68rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNull.With_null_throws.html",
+          "hash": "3/vF8JIXcywVGLVc1fyCEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNull.With_nonnull_succeeds.html",
+          "hash": "EbcFzfyTryz/Nzo0qVMTPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNull.With_nonnull_returns_input.html",
+          "hash": "P1gLnXvwGq0+2B4LdK3XJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNull.With_intpr_zero_throws.html",
+          "hash": "G1cNXT6dXME2pZevL4ZkjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNull.With_nonzero_intptr_succeeds.html",
+          "hash": "A3pLnclGGmrDCRtdaF3nCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNull.With_nonzero_intptr_returns_input.html",
+          "hash": "zBQxgyUP7jTOqwBevNyOSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNull.With_uintpr_zero_throws.html",
+          "hash": "DRMIgoe2fjJQwZ0rpYPC2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNull.With_nonzero_uintptr_succeeds.html",
+          "hash": "rTpLbGlZpoaOkRMgTG3QUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNull.With_nonzero_uintptr_returns_input.html",
+          "hash": "XMOre5KTYLsyau0xYkD1aQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNull.html",
+          "hash": "Dulqq3nQ+rF5zuXEVSOBAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_empty_string_throws.html",
+          "hash": "7Nmc5k0vvlvjk/RKDvJHWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_whitespace_only_throws.html",
+          "hash": "fnHD8EwldKe2gWlB2P1oKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_valid_string_succeeds.html",
+          "hash": "WxuPHoaO0Xb/LmKr+sz5RQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_valid_string_returns_input.html",
+          "hash": "UUMVd+rL+sm4EvTmJ0pZzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.html",
+          "hash": "+YfrJ0YcW5Ka3GwgasB0RQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.ValidateNotNullOrWhiteSpace.With_null_throws.html",
+          "hash": "V0a4K6PkJBE+gbmQAz8csQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArgValidator.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArgValidator.Tests.html",
+          "hash": "nKG5hpjQLfPzVUT5VyhCWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ubiquity.ArgValidators.ValidatedNotNullAttribute.yml",
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.ValidatedNotNullAttribute.html",
-          "hash": "7DUNIA3eKa98Ln6hRa7Vmg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotDefault.html",
-          "hash": "AciIzIVEc9vQuOeMN8n5nA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html",
-          "hash": "isWQ5duo4jiA9sdAemXG3g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace.html",
-          "hash": "TJw3j35MR+2X4WeD20INWw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateRange.html",
-          "hash": "BT3Imo7EYTQw5lAX7yjKtQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidatePattern.html",
-          "hash": "ghqlBKyReJhe1gTAyACesA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateLength.html",
-          "hash": "MoyYvmFs1yvedc0X5D14jA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateDefined.html",
-          "hash": "aUoEW/1BOJpULxEZ+MiQOg=="
+          "hash": "g/lqlAvzLmb1EzzC7+aO6A=="
         }
       },
       "is_incremental": false,
@@ -105,7 +309,91 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.Validators.html",
-          "hash": "9ABQCnAo5wr/FVB/1qk2Pw=="
+          "hash": "L8F1LkGG9/emYidjRBguUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotDefault.html",
+          "hash": "A41r/xzDs3vo5ZuHFCTE0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html",
+          "hash": "DiQNCGhw6aCq0DZbYgi4cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace.html",
+          "hash": "luvWYY8eHuFMWgjcZyFyQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateRange.html",
+          "hash": "MEeEr0Dy1bk+qgMOcEV8SQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidatePattern.html",
+          "hash": "hHu1G9edAQg36HXoFv+Q4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateLength.html",
+          "hash": "w0UBcWY9bFEH28/f871Q5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateDefined.html",
+          "hash": "+2G2Ycn5wXyRTgKFwztJBQ=="
         }
       },
       "is_incremental": false,
@@ -117,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.html",
-          "hash": "GfoD5Sey19mGJwg5v4U5gQ=="
+          "hash": "0raYxkHjQED82VA1gZSPjA=="
         }
       },
       "is_incremental": false,
@@ -129,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "VHLknFN7RgOt3/ysDi16ig=="
+          "hash": "MJV/h/prZBC8j1FMOBmEGg=="
         }
       },
       "is_incremental": false,
@@ -141,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "vZP0UofQhNQOsqkyL6HZ1Q=="
+          "hash": "Mm/xaybxETCNJ7nCfPblnw=="
         }
       },
       "is_incremental": false,
