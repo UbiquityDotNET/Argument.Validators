@@ -82,6 +82,9 @@ try
             git config --global core.safecrlf true
             git config --global core.autocrlf true
             git clone https://github.com/UbiquityDotNET/Argument.Validators.git -b gh-pages docs -q
+
+            # purge all current files so that they don't remain if the newly generated content doesn't need it.
+            del docs\* -Recurse -Force | Out-Null
         }
         finally
         {
@@ -92,14 +95,14 @@ try
     Write-Information "Restoring NuGet Packages"
     Invoke-MSBuild -Targets Restore -Project src\Ubiquity.ArgValidators.sln -Properties $msBuildProperties -LoggerArgs $msbuildLoggerArgs ($msbuildLoggerArgs + @("/bl:Ubiquity.ArgValidators-restore.binlog") )
 
-    Write-Information "Building Llvm.NET"
+    Write-Information "Building Solution"
     Invoke-MSBuild -Targets Build -Project src\Ubiquity.ArgValidators.sln -Properties $msBuildProperties -LoggerArgs $msbuildLoggerArgs ($msbuildLoggerArgs + @("/bl:Ubiquity.ArgValidators-build.binlog") )
 
-    Write-Information "Restoring Docs Project"
-    Invoke-MSBuild -Targets Restore -Project docfx\DocFX.csproj -Properties $msBuildProperties -LoggerArgs $msbuildLoggerArgs ($msbuildLoggerArgs + @("/bl:docfx-restore.binlog") )
+    #Write-Information "Restoring Docs Project"
+    #Invoke-MSBuild -Targets Restore -Project docfx\DocFX.csproj -Properties $msBuildProperties -LoggerArgs $msbuildLoggerArgs ($msbuildLoggerArgs + @("/bl:docfx-restore.binlog") )
 
-    Write-Information "Building Docs"
-    Invoke-MSBuild -Targets Build -Project docfx\DocFX.csproj -Properties $msBuildProperties -LoggerArgs $msbuildLoggerArgs ($msbuildLoggerArgs + @("/bl:docfx-build.binlog") )
+    #Write-Information "Building Docs"
+    #Invoke-MSBuild -Targets Build -Project docfx\DocFX.csproj -Properties $msBuildProperties -LoggerArgs $msbuildLoggerArgs ($msbuildLoggerArgs + @("/bl:docfx-build.binlog") )
     
     if( $env:APPVEYOR_PULL_REQUEST_NUMBER )
     {

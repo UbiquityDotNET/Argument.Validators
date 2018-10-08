@@ -6,7 +6,7 @@
       [
         {
           "files": [ "src/**.csproj"  ],
-          "exclude": [ "**/obj/**", "**/bin/**", ],
+          "exclude": [ "src/**Tests.csproj", "**/obj/**", "**/bin/**", ],
           "src":".."
         }
       ],

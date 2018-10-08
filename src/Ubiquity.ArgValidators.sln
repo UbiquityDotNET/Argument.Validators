@@ -15,7 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgValidator.Tests", "ArgValidator.Tests\ArgValidator.Tests.csproj", "{DB13C677-AD9D-41AC-8A77-815EBA621BAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArgValidator.Tests", "ArgValidator.Tests\ArgValidator.Tests.csproj", "{DB13C677-AD9D-41AC-8A77-815EBA621BAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Docfx", "..\docfx\Docfx.csproj", "{9F81DFDB-591F-4489-8AC3-BE21E40386B1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{16660D7A-0262-4CB8-A73F-8519561023EE} = {16660D7A-0262-4CB8-A73F-8519561023EE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +36,10 @@ Global
 		{DB13C677-AD9D-41AC-8A77-815EBA621BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB13C677-AD9D-41AC-8A77-815EBA621BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB13C677-AD9D-41AC-8A77-815EBA621BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F81DFDB-591F-4489-8AC3-BE21E40386B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F81DFDB-591F-4489-8AC3-BE21E40386B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F81DFDB-591F-4489-8AC3-BE21E40386B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F81DFDB-591F-4489-8AC3-BE21E40386B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
