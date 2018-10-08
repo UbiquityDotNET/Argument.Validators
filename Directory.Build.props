@@ -70,8 +70,8 @@
                 <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="stylecop.json" />
                 <None Include="$(MSBuildThisFileDirectory)Ubiquity.NET.ruleset" Link="Ubiquity.NET.ruleset" />
             </ItemGroup>
-            <ItemGroup>
-                <PackageReference Include="CSemVer.Build.Tasks" Version="2.0.0" />
+            <ItemGroup Condition="'$(IsTestProject)' != 'true'">
+                <PackageReference Include="CSemVer.Build.Tasks" Version="2.0.1" />
             </ItemGroup>
         </When>
         <When Condition="'$(MSBuildProjectExtension)'=='.vcxproj'">

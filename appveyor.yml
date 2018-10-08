@@ -36,9 +36,7 @@ deploy_script:
   - ps: .\Push-Docs.ps1
 
 test_script:
-  - ps: .\Invoke-UnitTests.ps1
-  - ps: Set-Culture fr-FR; .\Invoke-UnitTests.ps1
+  - dotnet test .\src\ArgValidator.Tests\ArgValidator.Tests.csproj
 
 artifacts:
-- path: BuildOutput/NuGet/**/*.nupkg
-  
+  - path: BuildOutput/NuGet/**/*.nupkg
