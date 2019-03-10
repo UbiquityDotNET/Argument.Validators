@@ -1,6 +1,9 @@
 # Argument.Validators
 Common annotation and argument validation support
 
+### Nuget
+![Nuget](https://img.shields.io/nuget/dt/Ubiquity.ArgValidators.svg)
+
 ## Build Status
 [![Build status](https://ci.appveyor.com/api/projects/status/2tm3k19g98piya52/branch/master?svg=true)](https://ci.appveyor.com/project/UbiquityDotNet/argument-validators/branch/master)
 
