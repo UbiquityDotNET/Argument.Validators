@@ -9,79 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.ValidatedNotNullAttribute.html",
-          "hash": "5ZxuG/gywAwIPTUlA+EfQA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotDefault.html",
-          "hash": "jKpGeKsK4gKKKC7mxfVHQg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html",
-          "hash": "mrVkzpR7+UQ7sW8H5o0vlw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace.html",
-          "hash": "34Wu5/V8Zf9n85GrNjzhjA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateRange.html",
-          "hash": "5aFMtBIsuqxeNNhcTDwF5Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidatePattern.html",
-          "hash": "slpWO1hE1qztgqNqd28lhg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateLength.html",
-          "hash": "1WJQUj7W+b0vEw1ckE6n9Q=="
+          "hash": "1B6GCeDxN/zoK4cu17CeiA=="
         }
       },
       "is_incremental": false,
@@ -93,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateDefined.html",
-          "hash": "mCm/2MCHIdUO3aSBhPtJiA=="
+          "hash": "qLy/DKVZRFKzBnUDijImZw=="
         }
       },
       "is_incremental": false,
@@ -105,7 +33,79 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.Validators.html",
-          "hash": "yDjSqJYoOjzuArQIxAqUhw=="
+          "hash": "TfVb2oJoR1ROZA84wMAWUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotDefault.html",
+          "hash": "aS8sYvnT0tgjqpSWmNcBag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html",
+          "hash": "uTX3nROelY1+A200d5bysA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace.html",
+          "hash": "2uBMY6MCP1GzY5jTU8cVOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateRange.html",
+          "hash": "hTFnfNDcNcglYRNAK6T4ew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidatePattern.html",
+          "hash": "7rH+j5oAhVZsQC60lthrCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateLength.html",
+          "hash": "XUsceir7JhWKt2/LemTMFg=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ubiquity.ArgValidators.html",
-          "hash": "ndl3SHP6+VKV9p9oCdsHVw=="
+          "hash": "kTfs1Gjje9JdTdoLvRflwQ=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "3iDKAdCTtYk0BuSFdc3WZg=="
+          "hash": "eUaEv25i68NkncXNHAxTjQ=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "BNCrDijcNU/EkcBXWyBSvA=="
+          "hash": "+/YRswshEqlIYdcVg7jjkg=="
         }
       },
       "is_incremental": false,
@@ -153,21 +153,30 @@
       "status": {
         "can_incremental": false,
         "details": "Cannot build incrementally because last build info is missing.",
-        "incrementalPhase": "build"
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
         }
       }
     },
@@ -175,7 +184,9 @@
       "status": {
         "can_incremental": false,
         "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
-        "incrementalPhase": "postProcessing"
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
       },
       "processors": {}
     }
