@@ -25,7 +25,7 @@ function Invoke-NuGet
         {
             if(!(Test-Path -PathType Container "$PSScriptRoot\Tools" ) )
             {
-                md "$PSScriptRoot\Tools" | Out-Null 
+                md "$PSScriptRoot\Tools" | Out-Null
             }
 
             # Download it from official NuGet release location
@@ -151,6 +151,11 @@ function Find-MSBuild([switch]$AllowVsPreReleases)
 
         Write-Verbose "VS installation found: $vsInstall"
         $msBuildPath = [System.IO.Path]::Combine( $vsInstall.InstallationPath, 'MSBuild', '15.0', 'bin', 'MSBuild.exe')
+        if(!(Test-Path -PathType Leaf $msBuildPath))
+        {
+            $msBuildPath = [System.IO.Path]::Combine( $vsInstall.InstallationPath, 'MSBuild', 'current', 'bin', 'MSBuild.exe')
+        }
+
         $foundOnPath = $false
     }
 
@@ -171,12 +176,12 @@ function Invoke-msbuild([string]$project, [hashtable]$properties, [string[]]$tar
 {
     $oldPath = $env:Path
     try
-    { 
+    {
         $projName = [System.IO.Path]::GetFileNameWithoutExtension($project)
         $msbuildArgs = @($project, "/m", "/t:$($targets -join ';')") + $loggerArgs + $additionalArgs
         if( $properties )
         {
-            $msbuildArgs += @( "/p:$(ConvertTo-PropertyList $properties)" ) 
+            $msbuildArgs += @( "/p:$(ConvertTo-PropertyList $properties)" )
         }
 
         Write-Information "msbuild $($msbuildArgs -join ' ')"
@@ -219,10 +224,10 @@ function Get-BuildPaths([string]$repoRoot)
 function Get-BuildInformation($buildPaths)
 {
     Write-Information "Restoring NuGet for $($buildPaths.GenerateVersionProj)"
-    Invoke-MSBuild -Targets Restore -Project $buildPaths.GenerateVersionProj -LoggerArgs $msbuildLoggerArgs
+    Invoke-MSBuild -Targets 'Restore' -Project $buildPaths.GenerateVersionProj -LoggerArgs ($msbuildLoggerArgs + @("/bl:GenerateVersion-Restore.binlog") )
 
-    Write-Information "Computing Build information"
-    Invoke-MSBuild -Targets GenerateVersionJson -Project $buildPaths.GenerateVersionProj -LoggerArgs $msbuildLoggerArgs
+    Write-Information "Generating version info from $($buildPaths.GenerateVersionProj)"
+    Invoke-MSBuild -Targets 'GenerateVersionJson' -Project $buildPaths.GenerateVersionProj -LoggerArgs ($msbuildLoggerArgs + @("/bl:GenerateVersion-Build.binlog") )
 
     $semVer = get-content (Join-Path $buildPaths.BuildOutputPath GeneratedVersion.json) | ConvertFrom-Json
 
@@ -233,7 +238,6 @@ function Get-BuildInformation($buildPaths)
               FileVersionBuild = $semVer.FileVersionBuild
               FileVersionRevision = $semver.FileVersionRevision
               FileVersion= "$($semVer.FileVersionMajor).$($semVer.FileVersionMinor).$($semVer.FileVersionBuild).$($semVer.FileVersionRevision)"
-              LlvmVersion = "6.0.1" # TODO: Figure out how to extract this from the llvmlibs download
             }
 }
 
@@ -266,7 +270,7 @@ Function Expand-Archive([string]$Path, [string]$Destination) {
         "`"-o$($Destination)`""  # Output directory
         "`"$($Path)`"" # 7z file name
     )
-    & $7zPath $7zArgs 
+    & $7zPath $7zArgs
 }
 
 function Find7Zip()
@@ -299,15 +303,4 @@ function Find7Zip()
     return $path7Z
 }
 
-function Install-LlvmLibs($destPath)
-{
-    #TODO: Generalize the LLVM and MSC versioning to eliminate hard coded names here
-    if( !( test-path -PathType Leaf 'llvm-libs-6.0.1-msvc-15.8.7z' ) )
-    {
-        $asset = (Get-GitHubTaggedRelease UbiquityDotNet 'Llvm.Libs' 'v6.0.1-msvc-15.8').assets[0]
-        Invoke-WebRequest -UseBasicParsing -Uri $asset.browser_download_url -OutFile 'llvm-libs-6.0.1-msvc-15.8.7z'
-    }
-
-    Expand-Archive 'llvm-libs-6.0.1-msvc-15.8.7z' $destPath
-}
 
