@@ -20,8 +20,8 @@ try
         {
             throw "docspush_access_token value not present, cannot push without the oauth token"
         }
-        git config --global credential.helper store
-        [System.IO.File]::AppendAllLines("$env:USERPROFILE\.git-credentials", [string[]]@("https://$($env:docspush_access_token):x-oauth-basic@github.com"))
+        #git config --global credential.helper store
+        #[System.IO.File]::AppendAllLines("$env:USERPROFILE\.git-credentials", [string[]]@("https://$($env:docspush_access_token):x-oauth-basic@github.com"))
         git config --global user.email "$env:docspush_email"
         git config --global user.name "$env:docspush_username"
     }
