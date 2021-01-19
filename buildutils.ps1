@@ -303,4 +303,35 @@ function Find7Zip()
     return $path7Z
 }
 
+function Get-BuildVersionXML
+{
+    [OutputType([xml])]
+    param ()
+
+    [xml]$buildVersionXml = Get-Content ([System.IO.Path]::Combine($PSScriptRoot, 'BuildVersion.xml'))
+    return $buildVersionXml
+}
+
+function Get-BuildVersionTag
+{
+    # determine release tag from the build version XML file in the branch
+    Param([xml]$buildVersionXml = (Get-BuildVersionXML))
+    $buildVersionData = $buildVersionXml.BuildVersionData
+    $preReleaseSuffix=""
+    if($buildVersionData.PSObject.Properties['PreReleaseName'])
+    {
+        $preReleaseSuffix = "-$($buildVersionData.PreReleaseName)"
+        if($buildVersionData.PSObject.Properties['PreReleaseNumber'])
+        {
+            $preReleaseSuffix += ".$($buildVersionData.PreReleaseNumber)"
+            if($buildVersionData.PSObject.Properties['PreReleaseFix'])
+            {
+                $preReleaseSuffix += ".$($buildVersionData.PreReleaseFix)"
+            }
+        }
+    }
+
+    return "v$($buildVersionData.BuildMajor).$($buildVersionData.BuildMinor).$($buildVersionData.BuildPatch)$preReleaseSuffix"
+}
+
 

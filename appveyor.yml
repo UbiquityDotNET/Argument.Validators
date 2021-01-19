@@ -14,7 +14,7 @@ environment:
   docspush_email: 32618965+cibuild-telliam@users.noreply.github.com
   docspush_username: cibuild-telliam
   docspush_access_token:
-    secure: QqWCIyFM6uBBbkW1jnlVGsMQWy+9aPY9rhD56oNT2L/0Cmw2bynROEsrUrOPpBrk
+    secure: Um8JxsB7oUh0+LctiickvLan11fab6eub3YWsxyIc/yKc+fJ3q4G/23MTU8uGXoW
 
 skip_commits:
   files:

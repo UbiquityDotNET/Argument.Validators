@@ -1,39 +1,78 @@
-if($env:APPVEYOR_PULL_REQUEST_NUMBER -or ($env:build_reason -ieq "PullRequest") )
+Param(
+    [switch]$SkipPush
+)
+
+. .\buildutils.ps1
+
+Write-Information "Preparing to PUSH updated docs to GitHub IO"
+
+$canPush = !$env:APPVEYOR_PULL_REQUEST_NUMBER -and !($env:build_reason -ieq "PullRequest")
+if(!$canPush)
 {
+    Write-Information "Skipping Docs PUSH as this is not an official build"
     return;
 }
-pushd .\BuildOutput\docs -ErrorAction Stop
-try
-{
+
     # Docs must only be updated from a build with the official repository as the default remote.
     # This ensures that the links to source in the generated docs will have the correct URLs
     # (e.g. docs pushed to the official repository MUST not have links to source in some private fork)
     $remoteUrl = git ls-remote --get-url
-    if($remoteUrl -ne "https://github.com/UbiquityDotNET/Argument.Validators.git")
+
+Write-Information "Remote URL: $remoteUrl"
+
+if(!($remoteUrl -like "https://github.com/UbiquityDotNET/Argument.Validators*"))
+{
+    throw "Pushing docs is only allowed when the origin remote is the official source release current remote is '$remoteUrl'"
+}
+
+if(!$env:docspush_access_token -and !$SkipPush)
+{
+    Write-Error "Missing docspush_access_token"
+}
+
+if(!$env:docspush_email)
+{
+    Write-Error "Missing docspush_email"
+}
+
+if(!$env:docspush_username)
+{
+    Write-Error "Missing docspush_username"
+}
+
+pushd .\BuildOutput\docs -ErrorAction Stop
+try
+{
+    if($env:docspush_access_token)
     {
-        throw "Pushing docs is only allowed when the origin remote is the official source release. Current remote: $remoteUrl"
+        git config --local credential.helper store
+        Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:docspush_access_token):x-oauth-basic@github.com`n"
     }
 
-    if($env:CI)
+    git config --local user.email "$env:docspush_email"
+    git config --local user.name "$env:docspush_username"
+
+    Write-Information 'Adding files to git'
+    git add -A
+    git ls-files -o --exclude-standard | %{ git add $_}
+    if(!$?)
     {
-        if(!$env:docspush_access_token)
-        {
-            throw "docspush_access_token value not present, cannot push without the oauth token"
-        }
-        #git config --global credential.helper store
-        #[System.IO.File]::AppendAllLines("$env:USERPROFILE\.git-credentials", [string[]]@("https://$($env:docspush_access_token):x-oauth-basic@github.com"))
-        git config --global user.email "$env:docspush_email"
-        git config --global user.name "$env:docspush_username"
+        throw "git add failed"
     }
 
-    Write-Information "Adding files to git"
-    git add * | Out-File -Append docs-commit.log
+    $msg = "CI Docs Update $(Get-BuildVersionTag)"
+    Write-Information "Committing changes to git [$msg]"
+    git commit -m"$msg"
+    if(!$?)
+    {
+        throw "git commit failed"
+    }
 
-    Write-Information "Committing changes to git"
-    git commit -m "CI Docs Update" | Out-File -Append docs-commit.log
-
-    Write-Information "pushing changes to git"
-    git push -q
+    if(!$SkipPush)
+    {
+        Write-Information 'Pushing changes to git'
+        git push
+    }
 }
 finally
 {
