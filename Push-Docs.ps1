@@ -1,4 +1,4 @@
-if($env:APPVEYOR_PULL_REQUEST_NUMBER)
+if($env:APPVEYOR_PULL_REQUEST_NUMBER -or ($env:build_reason -ieq ""PullRequest") )
 {
     return;
 }
@@ -14,7 +14,7 @@ try
         throw "Pushing docs is only allowed when the origin remote is the official source release. Current remote: $remoteUrl"
     }
 
-    if($env:APPVEYOR)
+    if($env:CI)
     {
         git config --global credential.helper store
         Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:docspush_access_token):x-oauth-basic@github.com`n"

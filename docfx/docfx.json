@@ -1,60 +1,52 @@
 {
-  "metadata":
-  [
-    {
-      "src":
-      [
+    "metadata": [
         {
+            "src": [
+                {
           "files": [ "src/**.csproj"  ],
           "exclude": [ "src/**Tests.csproj", "**/obj/**", "**/bin/**", ],
-          "src":".."
+                    "src": ".."
+                }
+            ],
+            "dest": "api",
+            "properties": {
+                "TargetFramework": "netstandard2.1"
+            }
         }
-      ],
-      "dest": "api",
-      "properties":
-      {
-          "TargetFramework": "net46"
-      }
+    ],
+    "build": {
+        "content": [
+            {
+                "files": [ "api/**.yml", "api/index.md" ]
+            },
+            {
+                "files": [ "toc.yml", "*.md" ],
+                "exclude": [ "obj/**" ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [ "images/**" ],
+                "exclude": [ "obj/**" ]
+            }
+        ],
+        "overwrite": [
+            {
+                "files": [ "apidoc/**.md" ],
+                "exclude": [ "obj/**" ]
+            }
+        ],
+        "dest": "../BuildOutput/docs",
+        "globalMetadataFiles": [],
+        "fileMetadataFiles": [],
+        "postProcessors": [],
+        "noLangKeyword": false,
+        "keepFileLink": false,
+        "cleanupCacheHistory": false,
+        "globalMetadata": {
+            "_appTitle": "Ubiquity.ArgValidators",
+            "_appFooter": "Copyright (C) 2017-2021, Ubiquity.NET Contributors",
+            "_disableBreadcrumb": true
+        }
     }
-  ],
-  "build":
-  {
-    "content":
-    [
-      {
-        "files": [ "api/**.yml", "api/index.md" ]
-      },
-      {
-        "files": [ "toc.yml", "*.md" ],
-        "exclude": [ "obj/**" ]
-      }
-    ],
-    "resource":
-    [
-      {
-        "files": [ "images/**" ],
-        "exclude": [ "obj/**" ]
-      }
-    ],
-    "overwrite":
-    [
-      {
-        "files": [ "apidoc/**.md" ],
-        "exclude": [ "obj/**" ]
-      }
-    ],
-    "dest": "../BuildOutput/docs",
-    "globalMetadataFiles": [],
-    "fileMetadataFiles": [],
-    "postProcessors": [],
-    "noLangKeyword": false,
-    "keepFileLink": false,
-    "cleanupCacheHistory": false,
-    "globalMetadata" :
-    {
-      "_appTitle" : "Ubiquity.ArgValidators",
-      "_appFooter" : "Copyright (C) 2017-2019, Ubiquity.NET Contributors",
-      "_disableBreadcrumb" : true
-    }
-  }
 }

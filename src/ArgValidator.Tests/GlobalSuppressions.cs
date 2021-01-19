@@ -8,6 +8,7 @@
 // a specific target and scoped to a namespace, type, member, etc.
 */
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage(
@@ -17,3 +18,5 @@ using System.Diagnostics.CodeAnalysis;
     )]
 
 [assembly: SuppressMessage( "StyleCop.CSharp.DocumentationRules", "SA1652:Enable XML documentation output", Justification = "Unit tests" )]
+
+[assembly: CLSCompliant(false)]

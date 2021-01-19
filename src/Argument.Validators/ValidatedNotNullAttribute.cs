@@ -6,7 +6,7 @@ using System;
 
 namespace Ubiquity.ArgValidators
 {
-    /// <summary>Marker Attribute to inform CodeAnalysis that a parameter is validated as non-null in a method</summary>
+    /// <summary>Marker Attribute to inform CodeAnalysis that a parameter is validated as non-null in a method.</summary>
     [AttributeUsage( AttributeTargets.Parameter )]
     public sealed class ValidatedNotNullAttribute
         : Attribute

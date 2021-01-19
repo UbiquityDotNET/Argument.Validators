@@ -1,5 +1,6 @@
 <BuildVersionData
-    BuildMajor = "6"
+    BuildMajor = "7"
     BuildMinor = "0"
-    BuildPatch = "2"
+    BuildPatch = "0"
+    PreReleaseName ="alpha"
 />
