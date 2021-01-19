@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Method ValidateNotNullOrWhiteSpace
    | Ubiquity.ArgValidators ">
-    <meta name="generator" content="docfx 2.42.2.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -125,30 +125,29 @@
   <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateNotNullOrWhiteSpace_System_String_System_String_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab-small btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L93" title="View Source" class="fab-small btn-info pull-right"><i class="fa fa-code"></i></a>
+  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L77" title="View Source" class="fab-small btn-info pull-right"><i class="fa fa-code"></i></a>
 </span>
 <a id="Ubiquity_ArgValidators_Validators_ValidateNotNullOrWhiteSpace_" data-uid="Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace*"></a>
 <h2 id="Ubiquity_ArgValidators_Validators_ValidateNotNullOrWhiteSpace_System_String_System_String_" data-uid="Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace(System.String,System.String)">ValidateNotNullOrWhiteSpace(String, String)</h2>
-<div class="markdown level1 summary"><p>Validates a parameter string is not null or white space</p>
+<div class="markdown level1 summary"><p>Validates a parameter string is not null or white space.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h3 class="decalaration">Declaration
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">[ContractAnnotation(&quot;value:null =&gt; halt&quot;)]
-public static string ValidateNotNullOrWhiteSpace(this string value, [InvokerParameterName] string paramName)</code></pre>
+  <pre><code class="lang-csharp hljs">public static string ValidateNotNullOrWhiteSpace(this string value, string paramName)</code></pre>
 </div>
 <h2 class="parameters">Parameters</h2>
 <table class="table table-bordered table-striped table-condensed">
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
       <td><span class="parametername">value</span></td>
-      <td><p>string to test</p>
+      <td><p>string to test.</p>
 </td>
     </tr>
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
       <td><span class="parametername">paramName</span></td>
-      <td><p>Name of the parameter for the exception if the <code data-dev-comment-type="paramref" class="paramref">value</code> is <see lang="null"></see> or whitespace</p>
+      <td><p>Name of the parameter for the exception if the <code data-dev-comment-type="paramref" class="paramref">value</code> is <see lang="null"></see> or whitespace.</p>
 </td>
     </tr>
 </table>
@@ -156,23 +155,23 @@ public static string ValidateNotNullOrWhiteSpace(this string value, [InvokerPara
 <table class="table table-bordered table-striped table-condensed">
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
-      <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> for fluent design usage</p>
+      <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> for fluent design usage.</p>
 </td>
     </tr>
 </table>
 <h2 id="Ubiquity_ArgValidators_Validators_ValidateNotNullOrWhiteSpace_System_String_System_String__remarks">Remarks</h2>
-<div class="markdown level1 remarks"><p>This validation provides a distinct exception or exception message depending on the input <code data-dev-comment-type="paramref" class="paramref">value</code></p>
+<div class="markdown level1 remarks"><p>This validation provides a distinct exception or exception message depending on the input <code data-dev-comment-type="paramref" class="paramref">value</code>.</p>
 </div>
 <h2 class="exceptions">Exceptions</h2>
 <table class="table table-bordered table-striped table-condensed">
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.argumentnullexception(v=vs.110).aspx">ArgumentNullException</a></td>
-      <td><p>If <code data-dev-comment-type="paramref" class="paramref">value</code> is <see lang="null"></see></p>
+      <td><p>If <code data-dev-comment-type="paramref" class="paramref">value</code> is <see lang="null"></see>.</p>
 </td>
     </tr>
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.argumentexception(v=vs.110).aspx">ArgumentException</a></td>
-      <td><p>If the string is empty or all whitespace (<a class="xref" href="https://msdn.microsoft.com/en-us/library/9btwf6wk(v=vs.110).aspx">Message</a> message will indicate which condition triggered the exception)</p>
+      <td><p>If the string is empty or all whitespace (<a class="xref" href="https://msdn.microsoft.com/en-us/library/9btwf6wk(v=vs.110).aspx">Message</a> message will indicate which condition triggered the exception).</p>
 </td>
     </tr>
 </table>
@@ -180,7 +179,7 @@ public static string ValidateNotNullOrWhiteSpace(this string value, [InvokerPara
           </div>
           <div class="contribution-panel mobile-hide">
               <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateNotNullOrWhiteSpace_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L93" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
+              <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L77" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -199,7 +198,7 @@ public static string ValidateNotNullOrWhiteSpace(this string value, [InvokerPara
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright (C) 2017-2019, Ubiquity.NET Contributors<br><strong>Build:</strong> 6.0.2--ci-BLD.466515549
+            Copyright (C) 2017-2021, Ubiquity.NET Contributors<br><strong>Build:</strong> 7.0.0-alpha.0.0.ci-BLD.503908678
             
           </div>
         </div>

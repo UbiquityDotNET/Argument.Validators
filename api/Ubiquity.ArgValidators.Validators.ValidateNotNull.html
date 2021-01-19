@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Method ValidateNotNull
    | Ubiquity.ArgValidators ">
-    <meta name="generator" content="docfx 2.42.2.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -125,17 +125,16 @@
   <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateNotNull__1___0_System_String_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateNotNull%60%601(%60%600%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab-small btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L39" title="View Source" class="fab-small btn-info pull-right"><i class="fa fa-code"></i></a>
+  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L40" title="View Source" class="fab-small btn-info pull-right"><i class="fa fa-code"></i></a>
 </span>
 <a id="Ubiquity_ArgValidators_Validators_ValidateNotNull_" data-uid="Ubiquity.ArgValidators.Validators.ValidateNotNull*"></a>
 <h2 id="Ubiquity_ArgValidators_Validators_ValidateNotNull__1___0_System_String_" data-uid="Ubiquity.ArgValidators.Validators.ValidateNotNull``1(``0,System.String)">ValidateNotNull&lt;T&gt;(T, String)</h2>
-<div class="markdown level1 summary"><p>Verifies an object isn&apos;t null</p>
+<div class="markdown level1 summary"><p>Verifies an object isn&apos;t null.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h3 class="decalaration">Declaration
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">[ContractAnnotation(&quot;value:null =&gt; halt&quot;)]
-public static T ValidateNotNull&lt;T&gt;(this T value, [InvokerParameterName] string paramName)
+  <pre><code class="lang-csharp hljs">public static T ValidateNotNull&lt;T&gt;(this T value, string paramName)
     where T : class</code></pre>
 </div>
 <h2 class="parameters">Parameters</h2>
@@ -143,13 +142,13 @@ public static T ValidateNotNull&lt;T&gt;(this T value, [InvokerParameterName] st
     <tr>
       <td><span class="xref">T</span></td>
       <td><span class="parametername">value</span></td>
-      <td><p>Object instance to check</p>
+      <td><p>Object instance to check.</p>
 </td>
     </tr>
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
       <td><span class="parametername">paramName</span></td>
-      <td><p>Name of the parameter for the exception if <code data-dev-comment-type="paramref" class="paramref">value</code> is <see lang="null"></see></p>
+      <td><p>Name of the parameter for the exception if <code data-dev-comment-type="paramref" class="paramref">value</code> is <see lang="null"></see>.</p>
 </td>
     </tr>
 </table>
@@ -157,7 +156,7 @@ public static T ValidateNotNull&lt;T&gt;(this T value, [InvokerParameterName] st
 <table class="table table-bordered table-striped table-condensed">
     <tr>
       <td><span class="xref">T</span></td>
-      <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> for fluent design usage</p>
+      <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> for fluent design usage.</p>
 </td>
     </tr>
 </table>
@@ -165,7 +164,7 @@ public static T ValidateNotNull&lt;T&gt;(this T value, [InvokerParameterName] st
 <table class="table table-bordered table-striped table-condensed">
     <tr>
       <td><span class="parametername">T</span></td>
-      <td><p>Type of value to test for</p>
+      <td><p>Type of value to test for.</p>
 </td>
     </tr>
 </table>
@@ -174,30 +173,29 @@ public static T ValidateNotNull&lt;T&gt;(this T value, [InvokerParameterName] st
   <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateNotNull_System_IntPtr_System_String_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateNotNull(System.IntPtr%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab-small btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L56" title="View Source" class="fab-small btn-info pull-right"><i class="fa fa-code"></i></a>
+  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L51" title="View Source" class="fab-small btn-info pull-right"><i class="fa fa-code"></i></a>
 </span>
 <a id="Ubiquity_ArgValidators_Validators_ValidateNotNull_" data-uid="Ubiquity.ArgValidators.Validators.ValidateNotNull*"></a>
 <h2 id="Ubiquity_ArgValidators_Validators_ValidateNotNull_System_IntPtr_System_String_" data-uid="Ubiquity.ArgValidators.Validators.ValidateNotNull(System.IntPtr,System.String)">ValidateNotNull(IntPtr, String)</h2>
-<div class="markdown level1 summary"><p>Verifies an IntPtr isn&apos;t null</p>
+<div class="markdown level1 summary"><p>Verifies an IntPtr isn&apos;t null.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h3 class="decalaration">Declaration
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">[ContractAnnotation(&quot;value:null =&gt; halt&quot;)]
-public static IntPtr ValidateNotNull(this IntPtr value, [InvokerParameterName] string paramName)</code></pre>
+  <pre><code class="lang-csharp hljs">public static IntPtr ValidateNotNull(this IntPtr value, string paramName)</code></pre>
 </div>
 <h2 class="parameters">Parameters</h2>
 <table class="table table-bordered table-striped table-condensed">
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.intptr(v=vs.110).aspx">IntPtr</a></td>
       <td><span class="parametername">value</span></td>
-      <td><p>value to check</p>
+      <td><p>value to check.</p>
 </td>
     </tr>
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
       <td><span class="parametername">paramName</span></td>
-      <td><p>Name of the parameter for the exception if <code data-dev-comment-type="paramref" class="paramref">value</code> is <see lang="null"></see></p>
+      <td><p>Name of the parameter for the exception if <code data-dev-comment-type="paramref" class="paramref">value</code> is <see lang="null"></see>.</p>
 </td>
     </tr>
 </table>
@@ -205,7 +203,7 @@ public static IntPtr ValidateNotNull(this IntPtr value, [InvokerParameterName] s
 <table class="table table-bordered table-striped table-condensed">
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.intptr(v=vs.110).aspx">IntPtr</a></td>
-      <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> for fluent design usage</p>
+      <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> for fluent design usage.</p>
 </td>
     </tr>
 </table>
@@ -214,30 +212,30 @@ public static IntPtr ValidateNotNull(this IntPtr value, [InvokerParameterName] s
   <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateNotNull_System_UIntPtr_System_String_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateNotNull(System.UIntPtr%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab-small btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L72" title="View Source" class="fab-small btn-info pull-right"><i class="fa fa-code"></i></a>
+  <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L61" title="View Source" class="fab-small btn-info pull-right"><i class="fa fa-code"></i></a>
 </span>
 <a id="Ubiquity_ArgValidators_Validators_ValidateNotNull_" data-uid="Ubiquity.ArgValidators.Validators.ValidateNotNull*"></a>
 <h2 id="Ubiquity_ArgValidators_Validators_ValidateNotNull_System_UIntPtr_System_String_" data-uid="Ubiquity.ArgValidators.Validators.ValidateNotNull(System.UIntPtr,System.String)">ValidateNotNull(UIntPtr, String)</h2>
-<div class="markdown level1 summary"><p>Verifies an UIntPtr isn&apos;t null</p>
+<div class="markdown level1 summary"><p>Verifies an UIntPtr isn&apos;t null.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h3 class="decalaration">Declaration
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">[ContractAnnotation(&quot;value:null =&gt; halt&quot;)]
-public static UIntPtr ValidateNotNull(this UIntPtr value, [InvokerParameterName] string paramName)</code></pre>
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static UIntPtr ValidateNotNull(this UIntPtr value, string paramName)</code></pre>
 </div>
 <h2 class="parameters">Parameters</h2>
 <table class="table table-bordered table-striped table-condensed">
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uintptr(v=vs.110).aspx">UIntPtr</a></td>
       <td><span class="parametername">value</span></td>
-      <td><p>value to check</p>
+      <td><p>value to check.</p>
 </td>
     </tr>
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
       <td><span class="parametername">paramName</span></td>
-      <td><p>Name of the parameter for the exception if <code data-dev-comment-type="paramref" class="paramref">value</code> is <see lang="null"></see></p>
+      <td><p>Name of the parameter for the exception if <code data-dev-comment-type="paramref" class="paramref">value</code> is <see lang="null"></see>.</p>
 </td>
     </tr>
 </table>
@@ -245,7 +243,7 @@ public static UIntPtr ValidateNotNull(this UIntPtr value, [InvokerParameterName]
 <table class="table table-bordered table-striped table-condensed">
     <tr>
       <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uintptr(v=vs.110).aspx">UIntPtr</a></td>
-      <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> for fluent design usage</p>
+      <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> for fluent design usage.</p>
 </td>
     </tr>
 </table>
@@ -253,7 +251,7 @@ public static UIntPtr ValidateNotNull(this UIntPtr value, [InvokerParameterName]
           </div>
           <div class="contribution-panel mobile-hide">
               <a href="https://github.com/UbiquityDotNET/Argument.Validators/new/master/apiSpec/new?filename=Ubiquity_ArgValidators_Validators_ValidateNotNull_.md&amp;value=---%0Auid%3A%20Ubiquity.ArgValidators.Validators.ValidateNotNull*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L39" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
+              <a href="https://github.com/UbiquityDotNET/Argument.Validators/blob/master/src/Argument.Validators/Validators.cs/#L40" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -272,7 +270,7 @@ public static UIntPtr ValidateNotNull(this UIntPtr value, [InvokerParameterName]
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright (C) 2017-2019, Ubiquity.NET Contributors<br><strong>Build:</strong> 6.0.2--ci-BLD.466515549
+            Copyright (C) 2017-2021, Ubiquity.NET Contributors<br><strong>Build:</strong> 7.0.0-alpha.0.0.ci-BLD.503908678
             
           </div>
         </div>
