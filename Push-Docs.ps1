@@ -1,4 +1,4 @@
-if($env:APPVEYOR_PULL_REQUEST_NUMBER -or ($env:build_reason -ieq ""PullRequest") )
+if($env:APPVEYOR_PULL_REQUEST_NUMBER -or ($env:build_reason -ieq "PullRequest") )
 {
     return;
 }
