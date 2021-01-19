@@ -13,6 +13,7 @@ $ErrorActionPreference = "Stop"
 $InformationPreference = "Continue"
 try
 {
+    dotnet --list-sdks
     $msbuild = Find-MSBuild -AllowVsPrereleases:$AllowVsPreReleases
     if( !$msbuild )
     {
