@@ -16,6 +16,10 @@ try
 
     if($env:CI)
     {
+        if(!$env:docspush_access_token)
+        {
+            throw "docspush_access_token value not present, cannot push without the oauth token"
+        }
         git config --global credential.helper store
         Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:docspush_access_token):x-oauth-basic@github.com`n"
         git config --global user.email "$env:docspush_email"
