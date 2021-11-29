@@ -51,17 +51,16 @@ try
 {
     if($env:docspush_access_token)
     {
+        Write-Information 'Updating local credentials'
         git config --local credential.helper store
         Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:docspush_access_token):x-oauth-basic@github.com`n"
     }
 
     git config --local user.email "$env:docspush_email"
     git config --local user.name "$env:docspush_username"
-    git status
 
     Write-Information 'Adding files to git'
     git add -A
-    git ls-files -o --exclude-standard | %{ git add $_}
 
     $msg = "CI Docs Update $(Get-BuildVersionTag $buildInfo)"
     Write-Information "Committing changes to git [$msg]"
