@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
@@ -46,7 +46,7 @@ jobs:
             path: .\BuildOutput\Test-Results
 
   build-docs:
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
@@ -61,7 +61,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
             name: Docs
-            path: .\BuildOutput\docs\current
+            path: .\BuildOutput\docs
 
       - name: Publish build logs
         if: always() && github.event_name == 'pull_request'
