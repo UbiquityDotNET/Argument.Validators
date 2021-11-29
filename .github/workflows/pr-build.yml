@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
@@ -46,7 +46,7 @@ jobs:
             path: .\BuildOutput\Test-Results
 
   build-docs:
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
