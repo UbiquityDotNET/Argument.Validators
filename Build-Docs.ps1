@@ -51,15 +51,11 @@ try
         git clone https://github.com/UbiquityDotNET/Argument.Validators.git -b gh-pages $docsOutputPath -q
     }
 
-    # remove all contents from 'current' docs to ensure clean generated docs for this release
-    $currentVersionDocsPath = Join-Path $docsOutputPath 'current'
-    if(Test-Path -PathType Container $currentVersionDocsPath)
+    # remove all contents from docs generation to ensure clean generated docs for this release
+    if(Test-Path -PathType Container $docsOutputPath)
     {
-        Remove-Item -Path $currentVersionDocsPath -Recurse -Force
+        Remove-Item -Path $docsOutputPath -Recurse -Force
     }
-
-    $docfxRestoreBinLogPath = Join-Path $buildInfo['BinLogsPath'] Ubiquity.NET.Llvm-docfx-Restore.binlog
-    $docfxBuildBinLogPath = Join-Path $buildInfo['BinLogsPath'] Ubiquity.NET.Llvm-docfx-Build.binlog
 
     dotnet build 'docfx\Docfx.csproj' -p:$msBuildPropertyList
 }
