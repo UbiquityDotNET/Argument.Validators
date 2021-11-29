@@ -82,7 +82,8 @@ FunctionsToExport = @(
     'Show-FullBuildInfo',
     'Invoke-Git',
     'Get-BuildVersionTag',
-    'Assert-CmakeInfo'
+    'Assert-CmakeInfo',
+    'Verify-OfficialGitRemote'
 )
 
 # Cmdlets to export from this module
