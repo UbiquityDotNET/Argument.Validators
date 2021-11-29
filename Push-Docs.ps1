@@ -29,7 +29,7 @@ if(!$canPush)
     return;
 }
 
-Verify-OfficialGitRemote 'https://github.com/UbiquityDotNET/Argument.Validators' "Pushing docs"
+Assert-OfficialGitRemote 'https://github.com/UbiquityDotNET/Argument.Validators' 'Pushing docs'
 
 if(!$env:docspush_access_token -and !$SkipPush)
 {

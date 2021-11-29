@@ -52,7 +52,7 @@ function Get-DefaultBuildPaths([string]$repoRoot)
     return $buildPaths
 }
 
-function Verify-OfficialGitRemote
+function Assert-OfficialGitRemote
 {
 <#
 .SYNOPSIS
