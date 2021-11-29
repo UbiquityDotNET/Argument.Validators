@@ -38,6 +38,12 @@ try
 
     $docsOutputPath = $buildInfo['DocsOutputPath']
 
+    # remove all contents from docs generation to ensure clean generated docs for this release
+    if(Test-Path -PathType Container $docsOutputPath)
+    {
+        Remove-Item -Path $docsOutputPath -Recurse -Force
+    }
+
     # Clone docs output location so it is available as a destination for the Generated docs content
     # and the versioned docs links can function correctly for locally generated docs
     if(!$NoClone -and !(Test-Path (Join-Path $docsOutputPath '.git') -PathType Container))
@@ -49,12 +55,6 @@ try
 
         Write-Information "Cloning Docs repository"
         git clone https://github.com/UbiquityDotNET/Argument.Validators.git -b gh-pages $docsOutputPath -q
-    }
-
-    # remove all contents from docs generation to ensure clean generated docs for this release
-    if(Test-Path -PathType Container $docsOutputPath)
-    {
-        Remove-Item -Path $docsOutputPath -Recurse -Force
     }
 
     dotnet build 'docfx\Docfx.csproj' -p:$msBuildPropertyList
