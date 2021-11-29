@@ -7,7 +7,7 @@ Common annotation and argument validation support
 
 
 ### Nuget
-![Nuget](https://img.shields.io/nuget/dt/Ubiquity.ArgValidators.svg)
+![Nuget](https://img.shields.io/nuget/dt/Ubiquity..NET.ArgValidators.svg)
 
 ## Build Status
 [![CI-Build](https://github.com/UbiquityDotNET/Argument.Validators/actions/workflows/pr-build.yml/badge.svg)](https://github.com/UbiquityDotNET/Argument.Validators/actions/workflows/pr-build.yml)
