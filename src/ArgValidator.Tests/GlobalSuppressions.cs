@@ -11,6 +11,8 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
+[assembly: CLSCompliant( false )]
+
 [assembly: SuppressMessage(
     "Language Usage Opportunities",
     "RECS0015:If an extension method is called as static method convert it to method syntax",
@@ -18,5 +20,4 @@ using System.Diagnostics.CodeAnalysis;
     )]
 
 [assembly: SuppressMessage( "StyleCop.CSharp.DocumentationRules", "SA1652:Enable XML documentation output", Justification = "Unit tests" )]
-
-[assembly: CLSCompliant(false)]
+[assembly: SuppressMessage( "StyleCop.CSharp.DocumentationRules", "SA1600:Elements should be documented", Justification = "Unit Tests" )]

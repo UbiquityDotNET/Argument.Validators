@@ -1,6 +1,11 @@
 # Argument.Validators
 Common annotation and argument validation support
 
+>NOTE
+> v7.00 changed the name and namespace for these validators to conform
+> to common standards for the Ubiquity.NET organization.
+
+
 ### Nuget
 ![Nuget](https://img.shields.io/nuget/dt/Ubiquity.ArgValidators.svg)
 
@@ -11,7 +16,7 @@ Common annotation and argument validation support
 ## Examples
 
 ```C#
-using namespace Ubiquity.ArgValidators
+using namespace Ubiquity.NET.ArgValidators
 //...
 public static object Load( string path, object foo, int bar )
 {
@@ -23,3 +28,4 @@ public static object Load( string path, object foo, int bar )
 }
 ```
 
+[Complete documentation](https://ubiquitydotnet.github.io/Argument.Validators/) on all validators is available online

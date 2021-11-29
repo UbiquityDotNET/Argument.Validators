@@ -5,13 +5,15 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using Ubiquity.ArgValidators.Properties;
 
-namespace Ubiquity.ArgValidators
+using Ubiquity.NET.ArgValidators.Properties;
+
+namespace Ubiquity.NET.ArgValidators
 {
-    /// <summary>Parameter validation extension set.</summary>
+    /// <summary>Utility class to provide parameter validation extension methods</summary>
     public static class Validators
     {
         /// <summary>Verifies that a value is not equal to the default for the type.</summary>
@@ -21,15 +23,16 @@ namespace Ubiquity.ArgValidators
         /// <returns><paramref name="value"/> for fluent design usage.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="value"/> is the default value for value types or <see lang="null"/> for reference types.</exception>
         [DebuggerStepThrough]
+        [SuppressMessage( "Style", "IDE0046:Convert to conditional expression", Justification = "Nested ternary conditionals is NOT simplified" )]
         public static T ValidateNotDefault<T>( [ValidatedNotNull] this T value, string paramName )
         {
             // reference types default is null, for value types this compares to a boxed value
-            if( ReferenceEquals(value, default))
+            if( ReferenceEquals( value, default ) )
             {
                 throw new ArgumentNullException( paramName );
             }
 
-            return !EqualityComparer<T>.Default.Equals( value, default! ) ? value : throw new ArgumentNullException( paramName );
+            return !EqualityComparer<T>.Default.Equals( value, default ) ? value : throw new ArgumentNullException( paramName );
         }
 
         /// <summary>Verifies an object isn't null.</summary>
@@ -59,7 +62,7 @@ namespace Ubiquity.ArgValidators
         /// <param name="paramName">Name of the parameter for the exception if <paramref name="value"/> is <see lang="null"/>.</param>
         /// <returns><paramref name="value"/> for fluent design usage.</returns>
         [DebuggerStepThrough]
-        [CLSCompliant(false)]
+        [CLSCompliant( false )]
         public static UIntPtr ValidateNotNull( this UIntPtr value, string paramName )
         {
             return value != UIntPtr.Zero ? value : throw new ArgumentNullException( paramName );
@@ -75,6 +78,7 @@ namespace Ubiquity.ArgValidators
         /// <exception cref="ArgumentNullException">If <paramref name="value"/> is <see lang="null"/>.</exception>
         /// <exception cref="ArgumentException">If the string is empty or all whitespace (<see cref="Exception.Message"/> message will indicate which condition triggered the exception).</exception>
         [DebuggerStepThrough]
+        [SuppressMessage( "Style", "IDE0046:Convert to conditional expression", Justification = "Nested ternary conditionals is NOT simplified" )]
         public static string ValidateNotNullOrWhiteSpace( [ValidatedNotNull] this string value, string paramName )
         {
             if( value == null )
@@ -82,7 +86,7 @@ namespace Ubiquity.ArgValidators
                 throw new ArgumentNullException( paramName );
             }
 
-            if( value.Length == 0 || ( ( value.Length == 1 ) && ( value[ 0 ] == '\0' ) ) )
+            if( value.Length == 0 || ((value.Length == 1) && (value[ 0 ] == '\0')) )
             {
                 throw new ArgumentException( Resources.String_Must_not_be_empty, paramName );
             }
@@ -93,7 +97,7 @@ namespace Ubiquity.ArgValidators
         }
 
         /// <summary>Verifies a parameter is within a valid range.</summary>
-        /// <typeparam name="T">Type of the parameter (must be primitive type supporting comparisons).</typeparam>
+        /// <typeparam name="T">Type of the parameter (must be a value type supporting comparisons).</typeparam>
         /// <param name="i">Value of the parameter to test.</param>
         /// <param name="min">Minimum allowed value.</param>
         /// <param name="max">Maximum allowed value.</param>
@@ -104,7 +108,7 @@ namespace Ubiquity.ArgValidators
         {
             if( min.CompareTo( i ) > 0 || i.CompareTo( max ) > 0 )
             {
-                throw new ArgumentOutOfRangeException( paramName, i, string.Format( CultureInfo.CurrentCulture, Resources.Accepted_range_0_1_, min, max) );
+                throw new ArgumentOutOfRangeException( paramName, i, string.Format( CultureInfo.CurrentCulture, Resources.Accepted_range_0_1_, min, max ) );
             }
         }
 
@@ -164,6 +168,7 @@ namespace Ubiquity.ArgValidators
         /// <param name="paramName">Name of the parameter for the exception message if <paramref name="value"/> length is outside the specified range.</param>
         /// <returns><paramref name="value"/> for fluent design usage.</returns>
         [DebuggerStepThrough]
+        [SuppressMessage( "Style", "IDE0046:Convert to conditional expression", Justification = "Nested ternary conditionals is NOT simplified" )]
         public static string ValidateLength( [ValidatedNotNull] this string value, int min, int max, string paramName )
         {
             if( value == null )

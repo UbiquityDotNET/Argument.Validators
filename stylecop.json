@@ -11,7 +11,7 @@
         "namingRules":
         {
             "allowCommonHungarianPrefixes": false,
-            "allowedHungarianPrefixes": ["h", "di", "op", "os", "ir", "is", "do"]
+            "allowedHungarianPrefixes": ["h", "di", "op", "os", "ir", "is", "do", "un", "on", "to", "if", "no", "v","in"]
         },
         "orderingRules":
         {
@@ -34,7 +34,7 @@
             "companyName": "Ubiquity.NET Contributors",
             "headerDecoration": "-----------------------------------------------------------------------",
             "documentExposedElements": true,
-            "documentInterfaces": true,
+            "documentInterfaces": false,
             "documentInternalElements": false,
             "documentPrivateElements": false,
             "documentPrivateFields": false,

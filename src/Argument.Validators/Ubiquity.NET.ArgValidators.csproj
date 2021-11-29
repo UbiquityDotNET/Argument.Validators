@@ -1,25 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Sdk Name="Microsoft.Build.CentralPackageVersions" />
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.1;net5.0</TargetFrameworks>
+        <TargetFrameworks>netstandard2.1;net48</TargetFrameworks>
         <Determenistic>true</Determenistic>
-        <Authors>Ubiquity.NET Contributors</Authors>
-        <Company>Ubiquity.NET</Company>
-        <Product>Ubiquity.NET</Product>
-        <Description>.NET Method parameter validation library</Description>
-        <RepositoryUrl>https://github.com/UbiquityDotNET/Argument.Validators</RepositoryUrl>
-        <RepositoryType>GitHub</RepositoryType>
-        <PackageProjectUrl>https://github.com/UbiquityDotNET/Argument.Validators</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/UbiquityDotNET/Argument.Validators/blob/master/LICENSE</PackageLicenseUrl>
-        <PackageTags>.NET, Parameter Validation</PackageTags>
-        <Copyright>Copyright (c) 2017 Ubiquity.NET Contributors</Copyright>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <NoPackageAnalysis>true</NoPackageAnalysis>
         <DebugType>portable</DebugType>
         <DebugSymbols>true</DebugSymbols>
         <DocumentationFile>$(BaseIntermediateOutputPath)$(MSBuildProjectName).xml</DocumentationFile>
         <SignAssembly>False</SignAssembly>
-        <LangVersion>8</LangVersion>
-        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <MinClientVersion>4.0</MinClientVersion>
+        <Authors>Ubiquity.NET Contributors</Authors>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Company>Ubiquity.NET</Company>
+        <Product>Ubiquity.NET.ArgValidators</Product>
+        <Description>.NET Method parameter validation library</Description>
+        <PackageTags>.NET, Parameter Validation</PackageTags>
+        <Copyright>Copyright (c) 2017-2021 Ubiquity.NET Contributors</Copyright>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
+        <PackageProjectUrl>https://github.com/UbiquityDotNET/Argument.Validators</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/UbiquityDotNET/Argument.Validators.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>Apache-2.0 WITH LLVM-exception</PackageLicenseExpression>
     </PropertyGroup>
     <ItemGroup>
         <!--Keep docfx generated OBJ folder junk from cluttering solution view-->
@@ -44,9 +45,5 @@
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
         </EmbeddedResource>
-    </ItemGroup>
-    <ItemGroup>
-      <PackageReference Update="CSemVer.Build.Tasks" Version="2.0.5" />
-      <PackageReference Update="StyleCop.Analyzers" Version="1.1.118" />
     </ItemGroup>
 </Project>
