@@ -61,7 +61,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
             name: Docs
-            path: .\BuildOutput\docs\current
+            path: .\BuildOutput\docs
 
       - name: Publish build logs
         if: always() && github.event_name == 'pull_request'
