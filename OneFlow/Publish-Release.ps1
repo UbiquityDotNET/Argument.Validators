@@ -32,3 +32,8 @@ git pull upstream develop
 git push
 git tag -a $tagName $commit -m"Release $tagName"
 git push upstream $tagName
+
+# update master branch to point to the latest release for full releases
+git checkout master
+git merge --ff-only $tagName
+git push upstream master
