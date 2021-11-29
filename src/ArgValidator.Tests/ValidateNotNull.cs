@@ -3,13 +3,10 @@
 // </copyright>
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ubiquity.ArgValidators;
 
-/*
- ReSharper disable ExpressionIsAlwaysNull
- ReSharper disable NotResolvedInText
-*/
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+using Ubiquity.NET.ArgValidators;
 
 namespace ArgValidator.Tests
 {
@@ -18,7 +15,7 @@ namespace ArgValidator.Tests
     {
         [TestMethod]
         [ExpectedException( typeof( ArgumentNullException ) )]
-        public void With_null_throws()
+        public void With_null_throws( )
         {
             object o = null;
             Validators.ValidateNotNull( o, "name" );
@@ -35,7 +32,7 @@ namespace ArgValidator.Tests
         public void With_nonnull_returns_input( )
         {
             var x = new NotSupportedException( );
-            Assert.AreSame(x, Validators.ValidateNotNull( x, "name" ));
+            Assert.AreSame( x, Validators.ValidateNotNull( x, "name" ) );
         }
 
         [TestMethod]

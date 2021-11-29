@@ -4,13 +4,10 @@
 
 using System;
 using System.Diagnostics.CodeAnalysis;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ubiquity.ArgValidators;
 
-/*
- ReSharper disable ExpressionIsAlwaysNull
- ReSharper disable NotResolvedInText
-*/
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+using Ubiquity.NET.ArgValidators;
 
 namespace ArgValidator.Tests
 {
@@ -19,7 +16,7 @@ namespace ArgValidator.Tests
     {
         [TestMethod]
         [ExpectedException( typeof( ArgumentNullException ) )]
-        public void With_null_throws()
+        public void With_null_throws( )
         {
             Validators.ValidateNotNullOrWhiteSpace( null, "name" );
         }
@@ -50,7 +47,7 @@ namespace ArgValidator.Tests
         {
             string s = "x \t\n\r";
             string x = Validators.ValidateNotNullOrWhiteSpace( s, "name" );
-            Assert.AreSame(s,x);
+            Assert.AreSame( s, x );
         }
     }
 }

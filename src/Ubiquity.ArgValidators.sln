@@ -1,28 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ubiquity.ArgValidators", "Argument.Validators\Ubiquity.ArgValidators.csproj", "{16660D7A-0262-4CB8-A73F-8519561023EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ubiquity.NET.ArgValidators", "Argument.Validators\Ubiquity.NET.ArgValidators.csproj", "{16660D7A-0262-4CB8-A73F-8519561023EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BBF654AA-25D4-4887-9CEA-CC5F78FDC010}"
 	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitignore = ..\.gitignore
 		..\appveyor.yml = ..\appveyor.yml
-		..\BuildAll.ps1 = ..\BuildAll.ps1
-		..\buildutils.ps1 = ..\buildutils.ps1
+		..\Build-All.ps1 = ..\Build-All.ps1
+		..\Build-Docs.ps1 = ..\Build-Docs.ps1
+		..\Build-Source.ps1 = ..\Build-Source.ps1
 		..\BuildVersion.xml = ..\BuildVersion.xml
 		..\Directory.Build.props = ..\Directory.Build.props
 		..\Directory.Build.targets = ..\Directory.Build.targets
+		..\global.json = ..\global.json
+		..\Packages.props = ..\Packages.props
 		..\Push-Docs.ps1 = ..\Push-Docs.ps1
 		..\README.md = ..\README.md
+		..\repo-buildutils.ps1 = ..\repo-buildutils.ps1
+		..\stylecop.json = ..\stylecop.json
+		..\Ubiquity.NET.ruleset = ..\Ubiquity.NET.ruleset
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArgValidator.Tests", "ArgValidator.Tests\ArgValidator.Tests.csproj", "{DB13C677-AD9D-41AC-8A77-815EBA621BAA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Docfx", "..\docfx\Docfx.csproj", "{9F81DFDB-591F-4489-8AC3-BE21E40386B1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{16660D7A-0262-4CB8-A73F-8519561023EE} = {16660D7A-0262-4CB8-A73F-8519561023EE}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,10 +41,6 @@ Global
 		{DB13C677-AD9D-41AC-8A77-815EBA621BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB13C677-AD9D-41AC-8A77-815EBA621BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB13C677-AD9D-41AC-8A77-815EBA621BAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F81DFDB-591F-4489-8AC3-BE21E40386B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F81DFDB-591F-4489-8AC3-BE21E40386B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F81DFDB-591F-4489-8AC3-BE21E40386B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F81DFDB-591F-4489-8AC3-BE21E40386B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

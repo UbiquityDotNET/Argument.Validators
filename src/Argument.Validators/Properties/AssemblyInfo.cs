@@ -17,11 +17,11 @@ using System.Runtime.InteropServices;
 // attribute to true on that type.
 */
 
-[assembly: ComVisible(false)]
+[assembly: ComVisible( false )]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM.
-[assembly: Guid("643c98db-e99b-4f3f-8cae-7265a0a8a3aa")]
+[assembly: Guid( "643c98db-e99b-4f3f-8cae-7265a0a8a3aa" )]
 
-[assembly:CLSCompliant(true)]
+[assembly: CLSCompliant( true )]
 
 [assembly: NeutralResourcesLanguage( "en-us" )]

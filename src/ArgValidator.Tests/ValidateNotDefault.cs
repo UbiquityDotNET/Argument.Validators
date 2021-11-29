@@ -3,8 +3,10 @@
 // </copyright>
 
 using System;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ubiquity.ArgValidators;
+
+using Ubiquity.NET.ArgValidators;
 
 namespace ArgValidator.Tests
 {
@@ -12,7 +14,7 @@ namespace ArgValidator.Tests
     public class ValidateNotDefault
     {
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException( typeof( ArgumentNullException ) )]
         public void With_default_of_valuetype_throws( )
         {
             Validators.ValidateNotDefault( default( int ), "name" );
@@ -21,7 +23,7 @@ namespace ArgValidator.Tests
         [TestMethod]
         public void With_nondefault_valuetype_succeeds( )
         {
-           Validators.ValidateNotDefault( 12345678, "name" );
+            Validators.ValidateNotDefault( 12345678, "name" );
         }
 
         [TestMethod]

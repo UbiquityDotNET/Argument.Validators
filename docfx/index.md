@@ -8,7 +8,7 @@ This is a simple library to enable common argument validation in .NET code
 ## Examples
 
 ```C#
-using namespace Ubiquity.ArgValidators
+using namespace Ubiquity.NET.ArgValidators
 //...
 public static object Load( string path, object foo, int bar )
 {
