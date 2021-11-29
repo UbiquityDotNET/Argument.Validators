@@ -1,15 +1,15 @@
 {
   "homepages": [],
-  "source_base_path": "C:/projects/argument-validators/docfx",
+  "source_base_path": "D:/a/Argument.Validators/Argument.Validators/docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.ValidatedNotNullAttribute.yml",
+      "source_relative_path": "api/Ubiquity.NET.ArgValidators.ValidatedNotNullAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.ValidatedNotNullAttribute.html",
-          "hash": "EeXHNb5C84SkMTWdjRiYjg=="
+          "relative_path": "api/Ubiquity.NET.ArgValidators.ValidatedNotNullAttribute.html",
+          "hash": "WCvCfXise/3umQzApxnn2GDViO0JtnjUra0xtCQSIJI="
         }
       },
       "is_incremental": false,
@@ -17,11 +17,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "source_relative_path": "api/Ubiquity.NET.ArgValidators.Validators.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.html",
-          "hash": "1JiBJl5mtPu7UMF2WEqGDA=="
+          "relative_path": "api/Ubiquity.NET.ArgValidators.Validators.ValidateRange.html",
+          "hash": "x0cucTZAWZtZao6CydKjzPJmPzNgLgIm+nlJ+P/M4Bg="
         }
       },
       "is_incremental": false,
@@ -29,11 +29,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "source_relative_path": "api/Ubiquity.NET.ArgValidators.Validators.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotDefault.html",
-          "hash": "5kI5kZ8RCFtDaBcMZbHZ7A=="
+          "relative_path": "api/Ubiquity.NET.ArgValidators.Validators.ValidatePattern.html",
+          "hash": "DoBTRHINmlj00OCem1dII+Q0fuWqDK8JxPPJ8isrBN8="
         }
       },
       "is_incremental": false,
@@ -41,11 +41,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "source_relative_path": "api/Ubiquity.NET.ArgValidators.Validators.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNull.html",
-          "hash": "tue6SOBfMHKdKyOlgWBHiA=="
+          "relative_path": "api/Ubiquity.NET.ArgValidators.Validators.ValidateLength.html",
+          "hash": "sZrbU9w+EvKCyj0oXxNHYYDoxInVdgVwZD2vPP2tr2k="
         }
       },
       "is_incremental": false,
@@ -53,11 +53,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "source_relative_path": "api/Ubiquity.NET.ArgValidators.Validators.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateNotNullOrWhiteSpace.html",
-          "hash": "fwfqTAVpH6m7I9dwowKUtA=="
+          "relative_path": "api/Ubiquity.NET.ArgValidators.Validators.ValidateDefined.html",
+          "hash": "3QQ5PnQEk3MC+6WcNxKVhi4X967DJCrAlJc/Y9QvBoM="
         }
       },
       "is_incremental": false,
@@ -65,11 +65,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "source_relative_path": "api/Ubiquity.NET.ArgValidators.Validators.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateRange.html",
-          "hash": "RU2QrMaiUVHK9nZLfbWpQQ=="
+          "relative_path": "api/Ubiquity.NET.ArgValidators.Validators.html",
+          "hash": "MkLnhK2sasNfz4x8+fKiS/6baKn+bjhP0NcpPdGDVUo="
         }
       },
       "is_incremental": false,
@@ -77,11 +77,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "source_relative_path": "api/Ubiquity.NET.ArgValidators.Validators.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidatePattern.html",
-          "hash": "EjuKgez4x6qYVSSJRdIZZQ=="
+          "relative_path": "api/Ubiquity.NET.ArgValidators.Validators.ValidateNotDefault.html",
+          "hash": "JWqaBzHh7tuW87QaFPFfZKE03cySSvtb2FX7zX2MXI8="
         }
       },
       "is_incremental": false,
@@ -89,11 +89,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "source_relative_path": "api/Ubiquity.NET.ArgValidators.Validators.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateLength.html",
-          "hash": "bPMjaLYy1EJnMKmtZCDbSw=="
+          "relative_path": "api/Ubiquity.NET.ArgValidators.Validators.ValidateNotNull.html",
+          "hash": "e020b4JWwcHAbxmUgNbPFTZrC15UCy47GR0GfArFS7g="
         }
       },
       "is_incremental": false,
@@ -101,11 +101,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.Validators.yml",
+      "source_relative_path": "api/Ubiquity.NET.ArgValidators.Validators.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.Validators.ValidateDefined.html",
-          "hash": "eN8t5YYFMTfxqnID8R0apQ=="
+          "relative_path": "api/Ubiquity.NET.ArgValidators.Validators.ValidateNotNullOrWhiteSpace.html",
+          "hash": "o90EOT9gvbgHNz72MfD33pHl5huJyDSfu5u8fxAPjh4="
         }
       },
       "is_incremental": false,
@@ -113,11 +113,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ubiquity.ArgValidators.yml",
+      "source_relative_path": "api/Ubiquity.NET.ArgValidators.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ubiquity.ArgValidators.html",
-          "hash": "g8EyBA9x8ratCCqfciErWw=="
+          "relative_path": "api/Ubiquity.NET.ArgValidators.html",
+          "hash": "qtIOkd5PqAUsj4AmnV3zbmNHj+8lApk3E7AzjSdfSmY="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "SjI2C+MB6FuXIDz3dY+9bg=="
+          "hash": "3s5ZgFz3xJWARzXuKMEpx0cweEAv+ZUTmzM6VeP6kic="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "940PSrzu03AVID/eJ7gFgA=="
+          "hash": "/3mhx0uKrw0i76Y5WejMjTlAC5N5R0NIlHEv+ZByD6c="
         }
       },
       "is_incremental": false,
