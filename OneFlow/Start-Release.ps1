@@ -23,7 +23,8 @@ $branchName = "release/$(Get-BuildVersionTag $buildInfo -ReleaseNameOnly)"
 git checkout -b $branchName $commit
 
 # Push to origin so it is clear to all a release is in process
-git push origin $branchName
+# this requires the account of the user creating the release has access to upstream
+git push upstream $branchName
 
 # push to fork so that changes go through normal PR process
-git push -u $branchName
+git push -u origin $branchName
