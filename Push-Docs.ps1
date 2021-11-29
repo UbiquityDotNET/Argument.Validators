@@ -57,6 +57,7 @@ try
 
     git config --local user.email "$env:docspush_email"
     git config --local user.name "$env:docspush_username"
+    git status
 
     Write-Information 'Adding files to git'
     git add -A
