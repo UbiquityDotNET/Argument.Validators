@@ -17,7 +17,7 @@
     For the gory details of this process see: https://www.endoflineblog.com/implementing-oneflow-on-github-bitbucket-and-gitlab
 #>
 
-Param([switch]$TagOnly)
+Param([Parameter(Mandatory=$True)]$commit)
 $repoRoot = [System.IO.Path]::GetFullPath([System.IO.Path]::Combine($PSScriptRoot, ".."))
 . (join-path $repoRoot repo-buildutils.ps1)
 $buildInfo = Initialize-BuildEnvironment
@@ -27,22 +27,8 @@ Set-Alias git Invoke-git -scope Script -option Private
 
 # merging the tag to develop branch on the official repository triggers the official build and release of the Nuget Packages
 $tagName = Get-BuildVersionTag $buildInfo
-$releaseBranch = "release/$tagName"
-$mergeBackBranchName = "merge-back-$tagName"
-
-# check out and tag the release branch
-git checkout $releasebranch
-git tag $tagname -m "Official release: $tagname"
-git push --tags
-
-# create a "merge-back" child branch to handle any updates/conflict resolutions
-# the tag from the parent will flow through to the final commit of the PR For
-# the merge. Otherwise, the tag is locked to the commit on the release branch
-# and any conflict resolution commits are "AFTER" the tag (and thus, not included
-# in the tagged commit)
-# This PR **MUST** be merged to origin with the --no-ff strategy
-git checkout -b $mergeBackBranchName $releasebranch
-git push origin $mergeBackBranchName
-
-Write-Output "Created and published $mergeBackBranchName to your forked repository, you must create a PR for this change to the Official repository"
-Write-Output "Additionally, these changes **MUST** be merged back without squashing"
+git co develop
+git pull upstream develop
+git push
+git tag -a $tagName $commit -m"Release $tagName"
+git push upstream $tagName

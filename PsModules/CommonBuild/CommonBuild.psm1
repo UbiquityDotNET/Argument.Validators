@@ -82,11 +82,10 @@ function Assert-OfficialGitRemote
     # (e.g. docs pushed to the official repository MUST not have links to source in some private fork)
     $remoteUrl = Invoke-Git ls-remote --get-url
 
-    if($remoteUrl -ine "https://github.com/UbiquityDotNET/Llvm.NET.git")
+    if($remoteUrl -ine $OfficialUrl)
     {
         throw "$Activity is only allowed when the origin remote is the official repository - current remote is '$remoteUrl'"
     }
-
 }
 
 function Update-Submodules
